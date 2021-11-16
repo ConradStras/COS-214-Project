@@ -3,3 +3,23 @@
 //
 
 #include "Satellite.h"
+
+void Satellite::add(FalconRocket *f) {
+    if(satellite== nullptr)
+        satellite = f;
+    else
+        satellite->add(f);
+}
+
+void Satellite::print() {
+    engine->print();
+}
+
+void Satellite::remove() {
+    if(satellite!= nullptr)
+        satellite = nullptr; //???
+}
+
+void Satellite::clone() {
+
+}
