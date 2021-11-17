@@ -4,11 +4,21 @@
 
 #ifndef COS_214_PROJECT_FIRSTSTAGE_H
 #define COS_214_PROJECT_FIRSTSTAGE_H
-
-
-class FirstStage {
+#include "State.h"
+#include "Stage.h"
+#include "LaunchState.h"
+class FirstStage : public State, public Stage{
 public:
-
+    // State things
+    string currentState();
+    void handleChange();
+    // Stage things, strategy design pattern
+    void printContents();
+    // fire changes the launch state
+    void fire();
+    ~FirstStage();
+private:
+    LaunchState* launchState;
 };
 
 

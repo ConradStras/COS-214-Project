@@ -66,7 +66,7 @@ Memento.o: Memento.cpp
 MerlinEngine.o: MerlinEngine.cpp
 		g++ -c -g MerlinEngine.cpp
 
-NotLaunched.o: NotLaunched.cpp
+NotLaunched.o: LaunchState.cpp
 		g++ -c -g NotLaunched.cpp
 
 Observer.o: Observer.cpp
@@ -96,6 +96,8 @@ TestButton.o: TestButton.cpp
 VacuumEngine.o: VacuumEngine.cpp
 		g++ -c -g VacuumEngine.cpp
 
+State.o: State.cpp
+		g++ -c -g State.cpp
 clean:
 	rm -rf *.o spacex
 

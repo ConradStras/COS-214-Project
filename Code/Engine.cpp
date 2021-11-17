@@ -15,8 +15,10 @@ void Engine::print() {
 }
 
 void Engine::remove() {
-    if(engine!= nullptr)
+    if(engine!= nullptr) {
+        delete engine; //added this before making it null.
         engine = nullptr; //not sure about this?
+    }
 }
 
 void Engine::clone() {

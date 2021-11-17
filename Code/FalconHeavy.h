@@ -7,11 +7,12 @@
 #include "FalconRocket.h"
 
 class FalconHeavy: public FalconRocket{
-private:
-
+    // so that it can access the private members in falconRocket.
+    friend class FalconRocket;
 public:
-
-
+    FalconHeavy();
+    ~FalconHeavy();
+    void getStageState();
 };
 
 
