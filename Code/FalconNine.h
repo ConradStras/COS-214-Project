@@ -4,9 +4,13 @@
 
 #ifndef COS_214_PROJECT_FALCONNINE_H
 #define COS_214_PROJECT_FALCONNINE_H
+#include "FalconRocket.h"
 
-
-class FalconNine {
+class FalconNine: public FalconRocket{
+private:
+    Stage * firstStage;
+    Stage * secondStage;
+public:
 
 };
 

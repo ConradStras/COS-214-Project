@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Stages.h"
+#include "Stage.h"
 using namespace std;
 
 class FalconRocket{ //Component in Decorator DP
@@ -16,7 +16,7 @@ public:
     virtual void print()=0; //print engines + totals?
     virtual void remove()=0;
 private:
-    Stages* stage; //FalconRocket has 2 stages
+    //Stage* stage; //FalconNine has 2 stages. Moved this to concrete classes.
 };
 
 #endif //COS_214_PROJECT_FALCONROCKET_H
