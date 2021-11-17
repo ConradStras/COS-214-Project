@@ -5,9 +5,10 @@
 #ifndef COS_214_PROJECT_MERLINENGINE_H
 #define COS_214_PROJECT_MERLINENGINE_H
 
-
-class MerlinEngine {
-
+#include "Engine.h"
+class MerlinEngine:public Engine{
+    void print();
+    Engine* clone();
 };
 
 

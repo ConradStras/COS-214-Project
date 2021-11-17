@@ -3,3 +3,6 @@
 //
 
 #include "FalconNine.h"
+void FalconNine::print() {
+    FalconRocket::print();
+}

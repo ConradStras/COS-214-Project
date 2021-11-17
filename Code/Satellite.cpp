@@ -12,7 +12,7 @@ void Satellite::add(FalconRocket *f) {
 }
 
 void Satellite::print() {
-    engine->print();
+    satellite->print();
 }
 
 void Satellite::remove() {

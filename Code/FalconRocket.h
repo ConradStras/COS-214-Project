@@ -11,25 +11,37 @@
 #include "Memento.h"
 #include "SpaceXProperty.h"
 using namespace std;
+class Engine;
 
 class FalconRocket: public SpaceXProperty { //Component in Decorator DP
 public:
+    FalconRocket();
+    ~FalconRocket(){};
     virtual void add(FalconRocket*)=0;
-    virtual void print()= 0; //print engines + totals? Works nicely.
+    virtual void print()=0; //print engines + totals? Works nicely.
     virtual void remove()= 0;
     virtual void getStageState() =0;
     virtual void createMemento() = 0;
     virtual void setMemento() = 0;
 
+    //getters and setters
+    int getEngineCount();
+    int getSatelliteCount();
+    void setEngineCount(int e);
+    void setSatelliteCount(int c);
 private:
     // a stage is a (stage class) and a state.
     // stage = strategy and state.
     // therefore the rocket takes the context role of the state DP/
+
     Stage * stages[];
     Memento * savedState;
+
     //adding these to facilitate easy workings for state changes.
     int noEngines;
     int noSatellites;
+
+    vector<Engine*> engines; //not sure about this yet
 };
 
 #endif //COS_214_PROJECT_FALCONROCKET_H
