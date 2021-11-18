@@ -15,9 +15,11 @@ public:
     virtual void printContents() = 0;
     virtual void fire() = 0;
     virtual bool getPayloadState();
+    virtual void setPayloadState(State* state);
     virtual bool getEngineState();
+    virtual void setEngineState(State* state);
     virtual bool getLaunchState();
-    virtual bool setLaunchState(bool in); //maybe necessary
+    virtual void setLaunchState(State* state); //maybe necessary
     int getEngineNo();
     int setEngineNo(int no);
 private:
