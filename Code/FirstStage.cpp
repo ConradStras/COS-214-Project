@@ -6,12 +6,12 @@
 
 using namespace std;
 FirstStage::FirstStage() {
-    noEngines = 0;
+    Stage::setEngineNo(0);
 }
 
 
 void FirstStage::increaseEngineCount() {
-
+    Stage::setEngineNo(Stage::getEngineNo()+1);
 }
 
 void FirstStage::handleChange() {

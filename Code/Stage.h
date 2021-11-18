@@ -17,7 +17,7 @@ public:
     virtual bool getPayloadState();
     virtual bool getEngineState();
     virtual bool getLaunchState();
-    virtual bool setLaunchState(bool in ); //maybe necessary
+    virtual bool setLaunchState(bool in); //maybe necessary
     int getEngineNo();
     int setEngineNo(int no);
 private:
