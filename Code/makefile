@@ -1,7 +1,7 @@
 all: spacex
 
-spacex: main.o Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o DroneShip.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o ISS.o LaunchButton.o Memento.o MerlinEngine.o NotLaunched.o Observer.o ObserverRepository.o Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o TestButton.cpp VacuumEngine.o
-		g++  main.o Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o DroneShip.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o ISS.o LaunchButton.o Memento.o MerlinEngine.o NotLaunched.o Observer.o ObserverRepository.o Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o TestButton.cpp VacuumEngine.o  -o spacex
+spacex: main.o Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o DroneShip.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o ISS.o LaunchButton.o Memento.o MerlinEngine.o LaunchState.o Observer.o ObserverRepository.o Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o TestButton.cpp VacuumEngine.o
+		g++  main.o Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o DroneShip.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o ISS.o LaunchButton.o Memento.o MerlinEngine.o LaunchState.o Observer.o ObserverRepository.o Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o TestButton.cpp VacuumEngine.o  -o spacex
 
 main.o: main.cpp
 		g++ -c -g main.cpp
@@ -66,8 +66,8 @@ Memento.o: Memento.cpp
 MerlinEngine.o: MerlinEngine.cpp
 		g++ -c -g MerlinEngine.cpp
 
-NotLaunched.o: LaunchState.cpp
-		g++ -c -g NotLaunched.cpp
+LaunchState.o: LaunchState.cpp
+		g++ -c -g LaunchState.cpp
 
 Observer.o: Observer.cpp
 		g++ -c -g Observer.cpp

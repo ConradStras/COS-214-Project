@@ -10,14 +10,14 @@ class FalconNine: public FalconRocket{
     // so that it can access the private members in falcon rocket
     friend class FalconRocket;
 public:
-    FalconNine(){};
-    ~FalconNine(){};
-    void add(FalconRocket*){};
+    FalconNine();
+    ~FalconNine();
+    void add(FalconRocket*);
     void print();
-    void remove(){};
-    void getStageState(){};
-    void createMemento(){};
-    void setMemento(){};
+    void remove();
+    void getStageState();
+    void createMemento();
+    void setMemento();
 };
 
 

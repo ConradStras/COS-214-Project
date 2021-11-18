@@ -8,17 +8,18 @@
 #include <string>
 #include <vector>
 #include "State.h"
+#include "Stage.h"
 #include "Memento.h"
 #include "SpaceXProperty.h"
 using namespace std;
 class Engine;
-
+class Stage;
 class FalconRocket: public SpaceXProperty { //Component in Decorator DP
 public:
     FalconRocket();
     ~FalconRocket(){};
     virtual void add(FalconRocket*)=0;
-    virtual void print()=0; //print engines + totals? Works nicely.
+    virtual void print(); //print engines + totals? Works nicely. Changed this from pure virtual to virtual.
     virtual void remove()= 0;
     virtual void getStageState() =0;
     virtual void createMemento() = 0;
@@ -33,15 +34,12 @@ private:
     // a stage is a (stage class) and a state.
     // stage = strategy and state.
     // therefore the rocket takes the context role of the state DP/
-
-    Stage * stages[];
     Memento * savedState;
-
     //adding these to facilitate easy workings for state changes.
     int noEngines;
     int noSatellites;
-
     vector<Engine*> engines; //not sure about this yet
+    Stage * stages[2];
 };
 
 #endif //COS_214_PROJECT_FALCONROCKET_H
