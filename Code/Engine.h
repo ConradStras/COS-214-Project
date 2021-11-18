@@ -7,11 +7,11 @@
 
 #include "FalconRocket.h"
 
-class Engine:public FalconRocket{ //Decorator in Decorator DP, Prototype in Prototype DP
+class Engine : public FalconRocket{ //Decorator in Decorator DP, Prototype in Prototype DP
 public:
     virtual Engine* clone(); //implemented in concrete classes
     void add(FalconRocket* f);
-    void print();
+    virtual void print();
     void remove();
     void getStageState(){};
     void createMemento(){};

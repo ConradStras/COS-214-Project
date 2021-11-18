@@ -10,4 +10,5 @@ void MerlinEngine::print() {
 Engine* MerlinEngine::clone() {
     return new MerlinEngine();
     //maybe return new *this if an engine will have parameters
+    // believe this is fine, Engine doesn't need to have parameters.
 }

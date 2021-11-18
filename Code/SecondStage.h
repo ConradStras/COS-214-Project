@@ -4,13 +4,16 @@
 
 #ifndef COS_214_PROJECT_SECONDSTAGE_H
 #define COS_214_PROJECT_SECONDSTAGE_H
-#include "State.h"
 #include "Stage.h"
 #include "LaunchState.h"
-class SecondStage :public State, public Stage{
+class SecondStage :public Stage{
 public:
+    SecondStage();
+    void increaseEngineCount();
+    void increaseSatelliteCount();
+    ~SecondStage();
     // State things
-    string currentState();
+    bool currentState();
     //make FalconRocket a friend class to facilitate changes.
     void handleChange();
     //Stage things
@@ -21,8 +24,8 @@ public:
     void depositPayload();
 
 private:
-    LaunchState * payloadState;
-    LaunchState * engineState;
+    int noSatellites;
+    bool buildComplete;
 };
 
 

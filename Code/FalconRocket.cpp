@@ -3,10 +3,6 @@
 //
 
 #include "FalconRocket.h"
-FalconRocket::FalconRocket() {
-    noEngines = 0;
-    noSatellites = 0;
-}
 
 void FalconRocket::print() {
     cout<<"Number of engines: "<<noEngines<<". Number of satellites: "<<noSatellites<<"."<<endl;

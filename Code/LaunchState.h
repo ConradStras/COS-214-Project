@@ -9,8 +9,11 @@
 class LaunchState : public State {
 
 public:
-    string currentState();
-    virtual void handleChange(FalconRocket *rocket);
+    LaunchState();
+    ~LaunchState();
+    bool currentState();
+    virtual void launch(); // this is the handleChange method in the state DP, incorporate with command
+    //DP
 private:
     bool launchState;
 };
