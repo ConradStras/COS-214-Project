@@ -8,8 +8,8 @@ void FalconNine::print() {
 }
 
 FalconNine::FalconNine() {
-    stages[0] = new FirstStage();
-    stages[1] = new SecondStage();
+    stages[0] = new FirstStage(9);
+    stages[1] = new SecondStage(9);
 }
 
 FalconNine::~FalconNine() {

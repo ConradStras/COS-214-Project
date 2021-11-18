@@ -5,7 +5,8 @@
 #ifndef COS_214_PROJECT_FALCONHEAVY_H
 #define COS_214_PROJECT_FALCONHEAVY_H
 #include "FalconRocket.h"
-
+#include "FirstStage.h"
+#include "SecondStage.h"
 class FalconHeavy: public FalconRocket{
     // so that it can access the private members in falconRocket.
     friend class FalconRocket;

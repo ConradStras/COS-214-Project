@@ -23,7 +23,7 @@ void SecondStage::increaseSatelliteCount() {
 
 SecondStage::~SecondStage() {}
 
-bool SecondStage::currentState() {
+bool SecondStage::currentState(int nineorheavy) {
     return Stage::getPayloadState();
 }
 

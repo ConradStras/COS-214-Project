@@ -8,8 +8,8 @@ void FalconHeavy::print() {
 }
 
 FalconHeavy::FalconHeavy() {
-    stages[0] = new FirstStage();
-    stages[1] = new SecondStage();
+    stages[0] = new FirstStage(0);
+    stages[1] = new SecondStage(0);
 }
 
 FalconHeavy::~FalconHeavy() {
