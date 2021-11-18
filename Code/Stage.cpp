@@ -24,6 +24,18 @@ bool Stage::getLaunchState() {
     return launchState->currentState();
 }
 
-bool Stage::setLaunchState(bool in) {
-    return false;
+
+void Stage::setLaunchState(State* state) {
+    delete this->launchState;
+    this->launchState =  state;
+}
+
+void Stage::setPayloadState(State *state) {
+    delete this->payloadState;
+    this->payloadState = state;
+}
+
+void Stage::setEngineState(State *state) {
+    delete this->engineState;
+    this->engineState = state;
 }

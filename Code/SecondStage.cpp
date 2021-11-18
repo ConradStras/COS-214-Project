@@ -4,9 +4,13 @@
 
 #include "SecondStage.h"
 
-SecondStage::SecondStage() {
+SecondStage::SecondStage(int nineorheavy) {
+    NineOrHeavy =  nineorheavy;
     Stage::setEngineNo(0);
     noSatellites = 0;
+    Stage::setPayloadState(new LaunchState());
+    Stage::setEngineState(new LaunchState());
+    Stage::setLaunchState(new LaunchState());
 }
 
 void SecondStage::increaseEngineCount() {
@@ -17,15 +21,13 @@ void SecondStage::increaseSatelliteCount() {
     noSatellites = noSatellites+1;
 }
 
-SecondStage::~SecondStage() {
-
-}
+SecondStage::~SecondStage() {}
 
 bool SecondStage::currentState() {
-    return false;
+    return Stage::getPayloadState();
 }
 
-void SecondStage::handleChange() {
+void SecondStage::handleChange(FalconRocket *) {
 
 }
 

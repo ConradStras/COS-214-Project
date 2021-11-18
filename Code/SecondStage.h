@@ -8,14 +8,14 @@
 #include "LaunchState.h"
 class SecondStage :public Stage{
 public:
-    SecondStage();
+    SecondStage(int nineorheavy);
     void increaseEngineCount();
     void increaseSatelliteCount();
     ~SecondStage();
     // State things
     bool currentState();
     //make FalconRocket a friend class to facilitate changes.
-    void handleChange();
+    void handleChange(FalconRocket *);
     //Stage things
     void printContents();
     // fires the engine, changing its state.
@@ -24,6 +24,7 @@ public:
     void depositPayload();
 
 private:
+    int NineOrHeavy;
     int noSatellites;
     bool buildComplete;
 };
