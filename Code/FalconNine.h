@@ -12,10 +12,10 @@ class FalconNine: public FalconRocket{
 public:
     FalconNine();
     ~FalconNine();
+    void getStageState();
     void add(FalconRocket*);
     void print();
     void remove();
-    void getStageState();
     void createMemento();
     void setMemento();
 };

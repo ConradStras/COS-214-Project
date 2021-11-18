@@ -12,7 +12,12 @@ class FalconHeavy: public FalconRocket{
 public:
     FalconHeavy();
     ~FalconHeavy();
+    void add(FalconRocket*);
+    void print();
+    void remove();
     void getStageState();
+    void createMemento();
+    void setMemento();
 };
 
 
