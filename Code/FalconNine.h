@@ -20,5 +20,4 @@ public:
     void setMemento();
 };
 
-
 #endif //COS_214_PROJECT_FALCONNINE_H

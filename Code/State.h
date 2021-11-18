@@ -14,7 +14,7 @@ class State {
 public:
     virtual bool currentState()= 0;
     virtual void handleChange() = 0;
-    virtual ~State();
+    virtual ~State(); //remove body
 };
 
 

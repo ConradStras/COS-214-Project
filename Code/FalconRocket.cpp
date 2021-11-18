@@ -5,22 +5,23 @@
 #include "FalconRocket.h"
 
 void FalconRocket::print() {
-    cout<<"Number of engines: "<<noEngines<<". Number of satellites: "<<noSatellites<<"."<<endl;
+//    cout<<"Number of engines: "<<noEngines<<". Number of satellites: "<<noSatellites<<"."<<endl;
     //this will need more detail
+    cout<<"Stage: "<<stages[0]->getEngineNo()<<endl;
 }
 
 int FalconRocket::getEngineCount() {
-    return noEngines;
+    //return noEngines;
 }
 
 int FalconRocket::getSatelliteCount() {
-    return noSatellites;
+    //return noSatellites;
 }
 
 void FalconRocket::setEngineCount(int e) {
-    noEngines = e;
+   // noEngines = e;
 }
 
 void FalconRocket::setSatelliteCount(int c) {
-    noSatellites = c;
+    //noSatellites = c;
 }
