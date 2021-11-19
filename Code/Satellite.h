@@ -9,7 +9,7 @@
 
 class Satellite:public FalconRocket{ //Decorator in Decorator DP, Prototype in Prototype DP
 public:
-    virtual void clone(); //implemented in concrete classes
+    virtual void clone();
     void add(FalconRocket* f);
     void print();
     void remove();

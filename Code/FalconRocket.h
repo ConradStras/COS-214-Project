@@ -17,7 +17,7 @@ class Engine;
 class Stage;
 class FalconRocket: public SpaceXProperty { //Component in Decorator DP
 public:
-    virtual void add(FalconRocket*)=0;
+    virtual void add(Engine*, int stage)=0;
     virtual void print(); //print engines + totals? Works nicely. Changed this from pure virtual to virtual.
     virtual void remove()= 0;
     virtual void getStageState() =0;
@@ -34,6 +34,8 @@ protected:
     // stage = strategy and state DPs.
     Stage * stages[2];
     // therefore the rocket takes the context role of the state DP
+    vector<Engine*> FirstStageEngines; //not sure about this yet. This seems lekker, rounds off composite DP.
+    vector<Engine*> SecondStageEngines;
 private:
     Memento * savedState;
     //adding these to facilitate easy workings for state changes.
@@ -41,7 +43,6 @@ private:
     //int noSatellites;
     //moved the above to the stages, as the state changes need to occur within the DP.
 
-    vector<Engine*> engines; //not sure about this yet. This seems lekker, rounds off composite DP.
 
 };
 

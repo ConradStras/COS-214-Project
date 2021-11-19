@@ -8,9 +8,6 @@ void Engine::add(FalconRocket *f) {
         engine = f;
     else
         engine->add(f);
-    
-    int temp = engine->getEngineCount();
-    engine->setEngineCount(temp+1);
 }
 
 void Engine::print() {

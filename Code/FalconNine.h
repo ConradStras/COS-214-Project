@@ -13,7 +13,7 @@ public:
     FalconNine();
     ~FalconNine();
     void getStageState();
-    void add(FalconRocket*);
+    void add(Engine*, int stage);
     void print();
     void remove();
     void createMemento();

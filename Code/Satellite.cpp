@@ -21,5 +21,5 @@ void Satellite::remove() {
 }
 
 void Satellite::clone() {
-
+    return new Satellite();
 }

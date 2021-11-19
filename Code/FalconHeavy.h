@@ -13,7 +13,7 @@ class FalconHeavy: public FalconRocket{
 public:
     FalconHeavy();
     ~FalconHeavy();
-    void add(FalconRocket*);
+    void add(Engine*, int stage);
     void print();
     void remove();
     void getStageState();
