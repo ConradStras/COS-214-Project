@@ -20,6 +20,6 @@ void Satellite::remove() {
         satellite = nullptr; //???
 }
 
-void Satellite::clone() {
+Satellite* Satellite::clone() {
     return new Satellite();
 }

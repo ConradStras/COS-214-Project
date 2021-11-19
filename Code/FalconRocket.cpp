@@ -5,8 +5,8 @@
 #include "FalconRocket.h"
 
 void FalconRocket::print() {
-    cout<<"Stage 1: "<<stages[0]->getEngineNo()<<endl;
-    cout<<"Stage 2: "<<stages[1]->getEngineNo()<<endl;
+    cout<<"Stage 1: "<<stages[0]->getEngineNo()<<" engines."<<endl;
+    cout<<"Stage 2: "<<stages[1]->getEngineNo()<<" engines."<<endl;
 }
 
 int FalconRocket::getEngineCount() {
@@ -50,3 +50,7 @@ void FalconRocket::launch(int stageNo) {
 //        stages[0]->increaseEngineCount();
 //    }
 //}
+
+void FalconRocket::add(FalconRocket *f) {
+
+}

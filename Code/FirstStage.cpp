@@ -44,7 +44,7 @@ void FirstStage::fire() {
 
 FirstStage::~FirstStage() {
 
-    Stage::~Stage();
+//    Stage::~Stage();
 }
 
 string FirstStage::currentStatus() { //heavy == 0 Nine == 9
