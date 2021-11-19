@@ -10,6 +10,7 @@
 class Engine : public FalconRocket{ //Decorator in Decorator DP, Prototype in Prototype DP
 public:
     virtual Engine* clone(); //implemented in concrete classes
+    virtual void add(Engine*, int stage){};
     void add(FalconRocket* f);
     virtual void print();
     void remove();
