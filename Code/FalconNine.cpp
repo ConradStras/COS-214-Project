@@ -51,3 +51,7 @@ void FalconNine::setMemento() {
 
 }
 
+void FalconNine::launch(int stageNo) {
+    FalconRocket::launch(stageNo);
+}
+
