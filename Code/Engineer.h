@@ -1,0 +1,10 @@
+#ifndef COS_214_PROJECT_ENGINEER_H
+#define COS_214_PROJECT_ENGINEER_H
+
+
+class Engineer {
+
+};
+
+
+#endif //COS_214_PROJECT_ENGINEER_H
