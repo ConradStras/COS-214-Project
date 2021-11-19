@@ -23,7 +23,7 @@ public:
     virtual void getStageState() =0;
     virtual void createMemento() = 0;
     virtual void setMemento() = 0;
-
+    virtual void setStageState(Stage*, int stageno);
     //getters and setters
     int getEngineCount();
     int getSatelliteCount();

@@ -10,12 +10,13 @@ LaunchState::LaunchState() {
 
 LaunchState::~LaunchState() {}
 
-bool LaunchState::currentState() {
-    return launchState;
-}
-
 void LaunchState::launch() {
     launchState = true;
 }
 
 void LaunchState::handleChange(FalconRocket *) {}
+
+string LaunchState::currentStatus() {
+    if(launchState) return "has been launched.";
+    else return "has not been launched.";
+}

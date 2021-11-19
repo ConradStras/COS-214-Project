@@ -4,19 +4,16 @@
 
 #ifndef COS_214_PROJECT_STATE_H
 #define COS_214_PROJECT_STATE_H
-
+#include <string>
+#include <iostream>
 
 using namespace std;
-
 class FalconRocket;
 
 class State {
 public:
-    State();
-    virtual bool currentState()=0;
+    virtual string currentStatus()=0;
     virtual void handleChange(FalconRocket*) = 0;
-    virtual ~State();
-
 };
 
 

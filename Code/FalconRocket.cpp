@@ -25,6 +25,11 @@ void FalconRocket::setSatelliteCount(int c) {
     //noSatellites = c;
 }
 
+void FalconRocket::setStageState(Stage * stagein, int stageno) {
+    delete this->stages[stageno];
+    stages[stageno] = stagein;
+}
+
 //void FalconRocket::add(Engine * f, int stage) {
 //    if(stage==1){
 //        FirstStageEngines.push_back(f);

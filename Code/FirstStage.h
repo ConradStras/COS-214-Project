@@ -12,7 +12,8 @@ class FirstStage :public Stage{
 public:
     // State things
     FirstStage(int nineorheavy);
-    bool currentState(int nineorheavy);
+    FirstStage(int nineorheavy, int EngineNo, State* eState, State* lState);
+    string currentStatus();
     void increaseEngineCount();
     void handleChange(FalconRocket*);
     // Stage things, strategy design pattern

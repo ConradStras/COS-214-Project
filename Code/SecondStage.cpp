@@ -2,6 +2,7 @@
 // Created by Conrad Strasheim on 2021/11/15.
 //
 
+#include <string>
 #include "SecondStage.h"
 
 SecondStage::SecondStage(int nineorheavy) {
@@ -23,8 +24,8 @@ void SecondStage::increaseSatelliteCount() {
 
 SecondStage::~SecondStage() {}
 
-bool SecondStage::currentState(int nineorheavy) {
-    return Stage::getPayloadState();
+string SecondStage::currentStatus() {
+    return "placeholder";
 }
 
 void SecondStage::handleChange(FalconRocket *) {

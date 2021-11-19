@@ -11,17 +11,20 @@ class Stage: public State{
     //Stage is strategy DP for the different stages in the different rocket classes.
 
 public:
+    virtual void handleChange(FalconRocket *) = 0;
+    virtual string currentStatus() = 0;
     virtual void increaseEngineCount() = 0;
     virtual void printContents() = 0;
     virtual void fire() = 0;
-    virtual bool getPayloadState();
+    virtual State * getPayloadState();
     virtual void setPayloadState(State* state);
-    virtual bool getEngineState();
+    virtual State * getEngineState();
     virtual void setEngineState(State* state);
-    virtual bool getLaunchState();
+    virtual State * getLaunchState();
     virtual void setLaunchState(State* state); //maybe necessary
     int getEngineNo();
-    int setEngineNo(int no);
+    void setEngineNo(int no);
+    virtual ~Stage();
 private:
     int noEngines;
     State * payloadState;

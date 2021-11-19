@@ -4,24 +4,24 @@
 
 #include "Stage.h"
 
-bool Stage::getPayloadState() {
-    return payloadState->currentState();
+State * Stage::getPayloadState() {
+    return payloadState;
 }
 
-bool Stage::getEngineState() {
-    return engineState->currentState();
+State * Stage::getEngineState() {
+    return engineState;
 }
 
 int Stage::getEngineNo() {
     return noEngines;
 }
 
-int Stage::setEngineNo(int no) {
+void Stage::setEngineNo(int no) {
     noEngines = no;
 }
 
-bool Stage::getLaunchState() {
-    return launchState->currentState();
+State * Stage::getLaunchState() {
+    return launchState;
 }
 
 
@@ -39,3 +39,5 @@ void Stage::setEngineState(State *state) {
     delete this->engineState;
     this->engineState = state;
 }
+
+Stage::~Stage() {}
