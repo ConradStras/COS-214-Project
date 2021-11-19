@@ -15,6 +15,7 @@ public:
     ~FalconHeavy();
     void add(Engine*, int stage);
     void print();
+    void launch(int stageNo);
     void remove();
     void getStageState();
     void createMemento();

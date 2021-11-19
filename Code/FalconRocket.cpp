@@ -30,6 +30,16 @@ void FalconRocket::setStageState(Stage * stagein, int stageno) {
     stages[stageno] = stagein;
 }
 
+//stageNo 0 = First Stage, 1 = Second Stage, 2 = Both stages.
+void FalconRocket::launch(int stageNo) {
+    if(stageNo == 0) stages[0]->handleChange(this);
+    if(stageNo == 1) stages[1]->handleChange(this);
+    else{
+        stages[0]->handleChange(this);
+        stages[2]->handleChange(this);
+    }
+}
+
 //void FalconRocket::add(Engine * f, int stage) {
 //    if(stage==1){
 //        FirstStageEngines.push_back(f);

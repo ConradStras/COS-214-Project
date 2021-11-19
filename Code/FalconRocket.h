@@ -25,6 +25,7 @@ public:
     virtual void createMemento() = 0;
     virtual void setMemento() = 0;
     virtual void setStageState(Stage*, int stageno);
+    virtual void launch(int stageNo);//command DP, state DP (change method).
     //getters and setters
     int getEngineCount();
     int getSatelliteCount();

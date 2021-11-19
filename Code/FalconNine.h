@@ -14,6 +14,7 @@ public:
     ~FalconNine();
     void getStageState();
     void add(Engine*, int stage);
+    void launch(int stageNo);
     void print();
     void remove();
     void createMemento();

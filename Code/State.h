@@ -6,8 +6,9 @@
 #define COS_214_PROJECT_STATE_H
 #include <string>
 #include <iostream>
-
+#include <sstream>
 using namespace std;
+
 class FalconRocket;
 
 class State {
