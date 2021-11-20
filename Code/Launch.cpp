@@ -13,7 +13,6 @@ void Launch::fireUpFalconHeavy() {
 }
 
 void Launch::fireUpFalconNine() {
-
     if(rocket->stages[0]->getEngineNo() == 9 && rocket->stages[1]->getEngineNo()==1)
         cout<<"The Falcon 9 is ready to launch."<<endl;
     else
