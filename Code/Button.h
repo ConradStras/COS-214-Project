@@ -8,6 +8,8 @@
 
 class Button {
 
+    virtual void press() = 0;
+
 };
 
 

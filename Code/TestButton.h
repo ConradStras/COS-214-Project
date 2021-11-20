@@ -4,9 +4,12 @@
 
 #ifndef COS_214_PROJECT_TESTBUTTON_H
 #define COS_214_PROJECT_TESTBUTTON_H
+#include "Button.h"
 
+using namespace std;
 
-class TestButton {
+class TestButton : public Button{
+    void press();
 
 };
 
