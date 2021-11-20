@@ -20,6 +20,6 @@ void LaunchState::handleChange(FalconRocket *) {
 }
 
 void LaunchState::currentStatus() {
-    if(launchState)  cout<<"The part has been launched/deposited/fired."<<endl;
-    else cout<<"The part has not been launched/deposited/fired."<<endl;
+    if(launchState)  cout<<"\t - The part has been launched/deposited/fired."<<endl;
+    else cout<<"\t - The part has not been launched/deposited/fired."<<endl;
 }

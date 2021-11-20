@@ -54,11 +54,12 @@ void FirstStage::currentStatus() { //heavy == 0 Nine == 9
     }
     else  buildComplete = false;
     stringstream ss;
-    ss <<"The current status of the first stage"<<endl;
+    cout<<"The engines parts:"<<endl;
+    getEngineState()->currentStatus();
+    cout<<"The launch state of the entire stage:"<<endl;
+    getLaunchState()->currentStatus();
     ss << "Build status: ";
     if (buildComplete) ss << "Finished Building" <<endl;
-    else ss << "Not yet finished building"<<endl;
-    getEngineState()->currentStatus();
-    getLaunchState()->currentStatus();
+    else ss << "Not yet finished building, current engines:"<<Stage::getEngineNo()<<endl;
     cout << ss.str();
 }
