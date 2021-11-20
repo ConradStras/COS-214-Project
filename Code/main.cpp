@@ -24,6 +24,7 @@ int main(){
     f1->add(e3, 2);
     f1->add(e2,1);
     f1->print();
+    f1->getStageState();
     //added a vacuum engine as well, works as well.
 
     return 0;

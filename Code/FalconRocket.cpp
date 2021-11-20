@@ -36,7 +36,7 @@ void FalconRocket::launch(int stageNo) {
     if(stageNo == 1) stages[1]->handleChange(this);
     else{
         stages[0]->handleChange(this);
-        stages[2]->handleChange(this);
+        stages[1]->handleChange(this);
     }
 }
 
@@ -53,4 +53,9 @@ void FalconRocket::launch(int stageNo) {
 
 void FalconRocket::add(FalconRocket *f) {
 
+}
+
+void FalconRocket::getStageState() {
+    stages[0]->currentStatus();
+    stages[1]->currentStatus();
 }

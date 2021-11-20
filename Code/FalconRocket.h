@@ -21,7 +21,7 @@ public:
     virtual void add(FalconRocket* f);
     virtual void print(); //print engines + totals? Works nicely. Changed this from pure virtual to virtual.
     virtual void remove()= 0;
-    virtual void getStageState() =0;
+    virtual void getStageState();
     virtual void createMemento() = 0;
     virtual void setMemento() = 0;
     virtual void setStageState(Stage*, int stageno);
