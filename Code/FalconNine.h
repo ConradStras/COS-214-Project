@@ -15,10 +15,8 @@ public:
     void getStageState();
     void add(vector<Engine*>, int stage);
     void launch(int stageNo);
-    void print();
     void remove();
-    void createMemento();
-    void setMemento();
+    void print();
 };
 
 #endif //COS_214_PROJECT_FALCONNINE_H

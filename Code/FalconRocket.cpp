@@ -14,6 +14,10 @@ void FalconRocket::setStageState(Stage * stagein, int stageno) {
     stages[stageno] = stagein;
 }
 
+void FalconRocket::add(vector<Engine *>, int stage) {
+
+}
+
 //stageNo 0 = First Stage, 1 = Second Stage, 2 = Both stages.
 void FalconRocket::launch(int stageNo) {
     if(stageNo == 0) stages[0]->handleChange(this);
@@ -24,22 +28,19 @@ void FalconRocket::launch(int stageNo) {
     }
 }
 
-//void FalconRocket::add(Engine * f, int stage) {
-//    if(stage==1){
-//        FirstStageEngines.push_back(f);
-//        stages[0]->increaseEngineCount();
-//    }
-//    else if(stage==2){
-//        SecondStageEngines.push_back(f);
-//        stages[0]->increaseEngineCount();
-//    }
-//}
+void FalconRocket::createMemento() {
 
-void FalconRocket::add(FalconRocket *f) {
+}
+
+void FalconRocket::setMemento() {
 
 }
 
 void FalconRocket::getStageState() {
     stages[0]->currentStatus();
     stages[1]->currentStatus();
+}
+
+Stage * FalconRocket::getStage(int stageNo) {
+    return stages[stageNo];
 }

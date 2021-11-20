@@ -3,13 +3,6 @@
 //
 
 #include "Engine.h"
-void Engine::add(FalconRocket *f) {
-    if(engine== nullptr)
-        engine = f;
-    else {
-        engine->add(f);
-    }
-}
 
 void Engine::add(Engine* e, int stage){
     if(stage==1){
@@ -20,15 +13,9 @@ void Engine::add(Engine* e, int stage){
     }
 }
 
-void Engine::print() {
-    engine->print();
-}
 
 void Engine::remove() {
-    if(engine!= nullptr) {
-        delete engine; //added this before making it null.
-        engine = nullptr; //not sure about this?
-    }
+
 }
 
 Engine* Engine::clone() {
