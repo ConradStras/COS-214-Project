@@ -15,7 +15,8 @@ public:
     virtual string currentStatus() = 0;
     virtual void increaseEngineCount() = 0;
     virtual void printContents() = 0;
-    virtual void fire() = 0;
+    //Getters and setters.
+
     virtual State * getPayloadState();
     virtual void setPayloadState(State* state);
     virtual State * getEngineState();
