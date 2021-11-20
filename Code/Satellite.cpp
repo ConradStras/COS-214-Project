@@ -4,12 +4,6 @@
 
 #include "Satellite.h"
 
-void Satellite::add(FalconRocket *f) {
-    if(satellite== nullptr)
-        satellite = f;
-    else
-        satellite->add(f);
-}
 
 void Satellite::print() {
     satellite->print();

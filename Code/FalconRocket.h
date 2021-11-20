@@ -17,8 +17,7 @@ class Engine;
 class Stage;
 class FalconRocket: public SpaceXProperty { //Component in Decorator DP
 public:
-    virtual void add(vector<Engine*>, int stage){};
-    virtual void add(FalconRocket* f);
+    virtual void add(vector<Engine*>, int stage);
     virtual void print(); //print engines + totals? Works nicely. Changed this from pure virtual to virtual.
     virtual void remove()= 0;
     virtual void getStageStatus();

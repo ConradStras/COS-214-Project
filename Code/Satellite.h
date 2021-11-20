@@ -11,12 +11,8 @@ class Satellite:public FalconRocket{ //Decorator in Decorator DP, Prototype in P
 public:
     Satellite* clone();
     void add(Engine*, int stage){}; //remove
-    void add(FalconRocket* f);
     void print();
     void remove();
-    void getStageStatus(){}; //remove
-    void createMemento() {}; //remove
-    void setMemento() {}; //remove
 private:
     FalconRocket* satellite;
 };

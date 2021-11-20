@@ -13,13 +13,11 @@ class FalconHeavy: public FalconRocket{
 public:
     FalconHeavy();
     ~FalconHeavy();
-    void add(Engine*, int stage);
-    void print();
+    void add(vector<Engine*>, int stage);
     void launch(int stageNo);
     void remove();
-    void getStageStatus();
-    void createMemento();
-    void setMemento();
+    void print();
+    void getStageState();
 };
 
 
