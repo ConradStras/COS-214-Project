@@ -14,9 +14,12 @@ void LaunchState::launch() {
     launchState = true;
 }
 
-void LaunchState::handleChange(FalconRocket *) {}
+void LaunchState::handleChange(FalconRocket *) {
+    if(launchState) launchState = false;
+    else launchState = true;
+}
 
 string LaunchState::currentStatus() {
-    if(launchState) return "has been launched.";
-    else return "has not been launched.";
+    if(launchState) return "The part has been launched/deposited/fired.";
+    else return "The part has not been launched/deposited/fired.";
 }

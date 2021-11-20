@@ -7,6 +7,10 @@
 
 
 class Command {
+public:
+    virtual void fireUpFalconHeavy()
+    virtual void fireUpFalconNine();
+    virtual void abort();
 
 };
 

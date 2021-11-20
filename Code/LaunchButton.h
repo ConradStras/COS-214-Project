@@ -4,10 +4,12 @@
 
 #ifndef COS_214_PROJECT_LAUNCHBUTTON_H
 #define COS_214_PROJECT_LAUNCHBUTTON_H
+#include "Button.h"
 
+using namespace std;
 
-class LaunchButton {
-
+class LaunchButton : public Button {
+    void press();
 };
 
 

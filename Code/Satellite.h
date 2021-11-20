@@ -9,10 +9,14 @@
 
 class Satellite:public FalconRocket{ //Decorator in Decorator DP, Prototype in Prototype DP
 public:
-    virtual void clone();
+    Satellite* clone();
+    void add(Engine*, int stage){}; //remove
     void add(FalconRocket* f);
     void print();
     void remove();
+    void getStageState(){}; //remove
+    void createMemento() {}; //remove
+    void setMemento() {}; //remove
 private:
     FalconRocket* satellite;
 };

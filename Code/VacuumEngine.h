@@ -4,10 +4,12 @@
 
 #ifndef COS_214_PROJECT_VACUUMENGINE_H
 #define COS_214_PROJECT_VACUUMENGINE_H
+#include "Engine.h"
 
-
-class VacuumEngine {
-
+class VacuumEngine: public Engine{
+public:
+    void print();
+    Engine * clone();
 };
 
 

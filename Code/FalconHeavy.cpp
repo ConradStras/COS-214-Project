@@ -50,3 +50,10 @@ void FalconHeavy::createMemento() {
 void FalconHeavy::setMemento() {
 
 }
+
+void FalconHeavy::launch(int stageNo) {
+    FalconRocket::launch(stageNo);
+}
+
+
+

@@ -6,8 +6,9 @@
 void Engine::add(FalconRocket *f) {
     if(engine== nullptr)
         engine = f;
-    else
+    else {
         engine->add(f);
+    }
 }
 
 void Engine::print() {
