@@ -14,7 +14,7 @@ public:
     void add(FalconRocket* f);
     virtual void print();
     void remove();
-    void getStageState(){};
+    void getStageStatus();
     void createMemento(){};
     void setMemento(){};
     vector<Engine*> first;

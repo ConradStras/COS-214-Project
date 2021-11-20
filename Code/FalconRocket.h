@@ -21,12 +21,13 @@ public:
     virtual void add(FalconRocket* f);
     virtual void print(); //print engines + totals? Works nicely. Changed this from pure virtual to virtual.
     virtual void remove()= 0;
-    virtual void getStageState();
+    virtual void getStageStatus();
     virtual void createMemento();
     virtual void setMemento();
     virtual void setStageState(Stage*, int stageno);
     virtual Stage * getStage(int stageNo);
     virtual void launch(int stageNo);//command DP, state DP (change method).
+    virtual ~FalconRocket();
 protected:
     // a stage is a (stage class) and a state.
     // stage = strategy and state DPs.

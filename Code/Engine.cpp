@@ -34,3 +34,7 @@ void Engine::remove() {
 Engine* Engine::clone() {
     return new Engine();
 }
+
+void Engine::getStageStatus() {
+    FalconRocket::getStageStatus();
+}

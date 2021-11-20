@@ -13,8 +13,9 @@ class FalconRocket;
 
 class State {
 public:
-    virtual string currentStatus()=0;
+    virtual void currentStatus()=0;
     virtual void handleChange(FalconRocket*) = 0;
+    virtual ~State();
 };
 
 

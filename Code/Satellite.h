@@ -14,7 +14,7 @@ public:
     void add(FalconRocket* f);
     void print();
     void remove();
-    void getStageState(){}; //remove
+    void getStageStatus(){}; //remove
     void createMemento() {}; //remove
     void setMemento() {}; //remove
 private:

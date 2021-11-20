@@ -2,7 +2,11 @@
 // Created by Conrad Strasheim on 2021/11/15.
 //
 
+
 #include "FalconNine.h"
+
+using namespace std;
+
 void FalconNine::print() {
     FalconRocket::print();
 }
@@ -58,8 +62,8 @@ void FalconNine::remove() {
 
 }
 
-void FalconNine::getStageState() {
-
+void FalconNine::getStageStatus() {
+    FalconRocket::getStageStatus();
 }
 
 void FalconNine::createMemento() {

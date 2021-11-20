@@ -24,8 +24,7 @@ void SecondStage::increaseSatelliteCount() {
 
 SecondStage::~SecondStage() {}
 
-string SecondStage::currentStatus() {
-    return "placeholder";
+void SecondStage::currentStatus() {
 }
 
 void SecondStage::handleChange(FalconRocket *) {

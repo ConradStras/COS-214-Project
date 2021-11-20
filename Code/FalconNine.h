@@ -12,7 +12,7 @@ class FalconNine: public FalconRocket{
 public:
     FalconNine();
     ~FalconNine();
-    void getStageState();
+    void getStageStatus();
     void add(vector<Engine*>, int stage);
     void launch(int stageNo);
     void print();

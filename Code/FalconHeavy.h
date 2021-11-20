@@ -17,7 +17,7 @@ public:
     void print();
     void launch(int stageNo);
     void remove();
-    void getStageState();
+    void getStageStatus();
     void createMemento();
     void setMemento();
 };

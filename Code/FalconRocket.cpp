@@ -39,11 +39,24 @@ void FalconRocket::add(FalconRocket *f) {
 
 }
 
-void FalconRocket::getStageState() {
+void FalconRocket::getStageStatus() {
     stages[0]->currentStatus();
     stages[1]->currentStatus();
 }
 
 Stage * FalconRocket::getStage(int stageNo) {
     return stages[stageNo];
+}
+
+void FalconRocket::createMemento() {
+
+}
+
+void FalconRocket::setMemento() {
+
+}
+
+FalconRocket::~FalconRocket() {
+//this needs to be implemented for Engine and stage deletion, might be tricky.
+
 }

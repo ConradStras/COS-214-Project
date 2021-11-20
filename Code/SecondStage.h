@@ -13,7 +13,7 @@ public:
     void increaseSatelliteCount();
     ~SecondStage();
     // State things
-    string currentStatus();
+    void currentStatus();
     //make FalconRocket a friend class to facilitate changes.
     void handleChange(FalconRocket *);
     //Stage things
