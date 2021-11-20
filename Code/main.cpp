@@ -8,6 +8,7 @@
 #include "MerlinEngine.h"
 #include "VacuumEngine.h"
 #include "FirstStage.h"
+#include "Satellite.h"
 using namespace std;
 
 int main(){
@@ -43,7 +44,8 @@ int main(){
 
 //    f1->getStageStatus();
     f1->getStageStatus();
-    //added a vacuum engine as well, works as well.
+    //added a vacuum engine as well, works as well
 
+    //testing satellites:
     return 0;
 }

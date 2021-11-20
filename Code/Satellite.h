@@ -5,16 +5,10 @@
 #ifndef COS_214_PROJECT_SATELLITE_H
 #define COS_214_PROJECT_SATELLITE_H
 
-#include "FalconRocket.h"
-
-class Satellite:public FalconRocket{ //Decorator in Decorator DP, Prototype in Prototype DP
+class Satellite{ //Decorator in Decorator DP, Prototype in Prototype DP
 public:
-    Satellite* clone();
-    void add(Engine*, int stage){}; //remove
-    void print();
-    void remove();
-private:
-    FalconRocket* satellite;
+//    Satellite* clone();
+//    void remove();
 };
 
 

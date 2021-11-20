@@ -14,6 +14,7 @@
 #include "SpaceXProperty.h"
 using namespace std;
 class Engine;
+class Satellite;
 class Stage;
 class FalconRocket: public SpaceXProperty { //Component in Decorator DP
 public:
@@ -34,11 +35,12 @@ protected:
     // therefore the rocket takes the context role of the state DP
     vector<Engine*> FirstStageEngines; //not sure about this yet. This seems lekker, rounds off composite DP.
     vector<Engine*> SecondStageEngines;
+    vector<Satellite*> satellites;
 private:
     Memento * savedState;
+    int noSatellites;
     //adding these to facilitate easy workings for state changes.
     //int noEngines;
-    //int noSatellites;
     //moved the above to the stages, as the state changes need to occur within the DP.
 
 };

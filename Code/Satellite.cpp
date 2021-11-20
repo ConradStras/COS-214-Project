@@ -4,16 +4,11 @@
 
 #include "Satellite.h"
 
+//Satellite* Satellite::clone() {
+//    return new Satellite();
+//}
+//
+//void Satellite::remove() {
+//
+//}
 
-void Satellite::print() {
-    satellite->print();
-}
-
-void Satellite::remove() {
-    if(satellite!= nullptr)
-        satellite = nullptr; //???
-}
-
-Satellite* Satellite::clone() {
-    return new Satellite();
-}
