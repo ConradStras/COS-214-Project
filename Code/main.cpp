@@ -16,15 +16,19 @@ int main(){
     cout<<endl;
     Engine* e1 = new MerlinEngine();
     Engine* e2 = new MerlinEngine();
-    Engine * e3 = new VacuumEngine();
+    Engine* e3 = new VacuumEngine();
+    Engine* e4 = new MerlinEngine();
 
-    e1->add(e2);
+    e1->add(e2,1);
+    e1->add(e3,1);
+    e1->add(e4,1);
     //Nice work Charlotte!
-    f1->add(e1,1);
-    f1->add(e3, 2);
-    f1->add(e2,1);
+    f1->add(e1->first,1);
+//    f1->add(e1,1);
+//    f1->add(e3, 2);
+//    f1->add(e2,1);
     f1->print();
-    f1->getStageState();
+//    f1->getStageState();
     //added a vacuum engine as well, works as well.
 
     return 0;

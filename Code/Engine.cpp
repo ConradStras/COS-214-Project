@@ -11,6 +11,15 @@ void Engine::add(FalconRocket *f) {
     }
 }
 
+void Engine::add(Engine* e, int stage){
+    if(stage==1){
+        first.push_back(e);
+    }
+    else if(stage==2){
+        second.push_back(e);
+    }
+}
+
 void Engine::print() {
     engine->print();
 }

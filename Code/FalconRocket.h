@@ -17,7 +17,7 @@ class Engine;
 class Stage;
 class FalconRocket: public SpaceXProperty { //Component in Decorator DP
 public:
-    virtual void add(Engine*, int stage)=0;
+    virtual void add(vector<Engine*>, int stage){};
     virtual void add(FalconRocket* f);
     virtual void print(); //print engines + totals? Works nicely. Changed this from pure virtual to virtual.
     virtual void remove()= 0;
@@ -26,11 +26,6 @@ public:
     virtual void setMemento() = 0;
     virtual void setStageState(Stage*, int stageno);
     virtual void launch(int stageNo);//command DP, state DP (change method).
-    //getters and setters
-    int getEngineCount();
-    int getSatelliteCount();
-    void setEngineCount(int e);
-    void setSatelliteCount(int c);
 protected:
     // a stage is a (stage class) and a state.
     // stage = strategy and state DPs.
@@ -44,7 +39,6 @@ private:
     //int noEngines;
     //int noSatellites;
     //moved the above to the stages, as the state changes need to occur within the DP.
-
 
 };
 
