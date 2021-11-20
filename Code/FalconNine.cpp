@@ -6,7 +6,8 @@
 #include "FalconNine.h"
 using namespace std;
 
-FalconNine::FalconNine() {
+FalconNine::FalconNine(const string& name) {
+    FalconRocket::setName(name);
     stages[0] = new FirstStage(9);
     stages[1] = new SecondStage(9);
 }
@@ -51,4 +52,5 @@ void FalconNine::getStageStatus() {
 void FalconNine::launch(int stageNo) {
     FalconRocket::launch(stageNo);
 }
+
 

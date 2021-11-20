@@ -1,19 +1,18 @@
 //
 // Created by Conrad Strasheim on 2021/11/15.
 //
-#include "iostream"
+#include <iostream>
 #include "FalconRocket.h"
 #include "FalconHeavy.h"
 #include "FalconNine.h"
 #include "MerlinEngine.h"
 #include "VacuumEngine.h"
-#include "FirstStage.h"
 using namespace std;
 
 int main(){
 //    Charlotte Testing:
-    FalconRocket* f1 = new FalconNine();
-    FalconRocket* f2 = new FalconHeavy();
+    FalconRocket* f1 = new FalconNine("Brooklyn Nine Nine");
+    FalconRocket* f2 = new FalconHeavy("We will steal the moon.");
     f1->print();
     cout<<endl;
     f2->print();
@@ -23,7 +22,6 @@ int main(){
     Engine* e3 = new VacuumEngine();
     Engine* e4 = new MerlinEngine();
     Engine* e5 = new MerlinEngine();
-
     //add all engines to a singular engine, add that engine to the rocket (for Decorator DP)
     e1->add(e2,1);
     e1->add(e3,2);

@@ -4,7 +4,8 @@
 
 #include "FalconHeavy.h"
 
-FalconHeavy::FalconHeavy() {
+FalconHeavy::FalconHeavy(const string& name){
+    FalconRocket::setName(name);
     stages[0] = new FirstStage(0);
     stages[1] = new SecondStage(0);
 }
@@ -50,6 +51,7 @@ void FalconHeavy::getStageStatus() {
 void FalconHeavy::launch(int stageNo) {
     FalconRocket::launch(stageNo);
 }
+
 
 
 
