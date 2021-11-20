@@ -28,6 +28,21 @@ void FalconRocket::launch(int stageNo) {
     }
 }
 
+void FalconRocket::getStageStatus() {
+    cout<<"The status of the Falcon Rocket:"<<endl;
+    cout<<"==================================================================="<<endl;
+    cout<< "The Falcon Rocket's first stage status is:"<<endl;
+    stages[0]->currentStatus();
+    cout<< endl;
+    cout<< "The Falcon Rocket's second stage status is:"<<endl;
+    stages[1]->currentStatus();
+    cout<<"==================================================================="<<endl;
+}
+
+Stage * FalconRocket::getStage(int stageNo) {
+    return stages[stageNo];
+}
+
 void FalconRocket::createMemento() {
 
 }
@@ -36,11 +51,7 @@ void FalconRocket::setMemento() {
 
 }
 
-void FalconRocket::getStageState() {
-    stages[0]->currentStatus();
-    stages[1]->currentStatus();
-}
+FalconRocket::~FalconRocket() {
+//this needs to be implemented for Engine and stage deletion, might be tricky.
 
-Stage * FalconRocket::getStage(int stageNo) {
-    return stages[stageNo];
 }

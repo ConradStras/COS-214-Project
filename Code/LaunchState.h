@@ -11,7 +11,7 @@ class LaunchState : public State {
 public:
     LaunchState();
     ~LaunchState();
-    string currentStatus();
+    void currentStatus();
     void handleChange(FalconRocket* );
     void launch(); // this is the handleChange method in the state DP, incorporate with command
     //DP

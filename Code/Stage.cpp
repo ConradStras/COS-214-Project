@@ -26,17 +26,14 @@ State * Stage::getLaunchState() {
 
 
 void Stage::setLaunchState(State* state) {
-    delete this->launchState;
     this->launchState =  state;
 }
 
 void Stage::setPayloadState(State *state) {
-    delete this->payloadState;
     this->payloadState = state;
 }
 
 void Stage::setEngineState(State *state) {
-    delete this->engineState;
     this->engineState = state;
 }
 

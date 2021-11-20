@@ -43,8 +43,8 @@ void FalconHeavy::remove() {
 
 }
 
-void FalconHeavy::getStageState() {
-
+void FalconHeavy::getStageStatus() {
+    FalconRocket::getStageStatus();
 }
 
 void FalconHeavy::launch(int stageNo) {

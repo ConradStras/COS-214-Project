@@ -17,7 +17,7 @@ public:
     void launch(int stageNo);
     void remove();
     void print();
-    void getStageState();
+    void getStageStatus();
 };
 
 

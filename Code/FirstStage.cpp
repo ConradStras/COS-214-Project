@@ -47,18 +47,19 @@ FirstStage::~FirstStage() {
 //    Stage::~Stage();
 }
 
-string FirstStage::currentStatus() { //heavy == 0 Nine == 9
+void FirstStage::currentStatus() { //heavy == 0 Nine == 9
     //very basic, still needs to be updated for each state inside this stage.
     if(NineOrHeavy == 9){ //we need 9 merlin Engines.
         if(Stage::getEngineNo() == 9) buildComplete = true;
     }
     else  buildComplete = false;
     stringstream ss;
-    ss <<"The current status of the first stage"<<endl;
+    cout<<"The engines parts:"<<endl;
+    getEngineState()->currentStatus();
+    cout<<"The launch state of the entire stage:"<<endl;
+    getLaunchState()->currentStatus();
     ss << "Build status: ";
     if (buildComplete) ss << "Finished Building" <<endl;
-    else ss << "Not yet finished building"<<endl;
-    ss << getEngineState()->currentStatus()<<endl;
-    ss << getLaunchState()->currentStatus()<<endl;
-    return ss.str();
+    else ss << "Not yet finished building, current engines:"<<Stage::getEngineNo()<<endl;
+    cout << ss.str();
 }

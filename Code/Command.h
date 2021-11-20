@@ -8,9 +8,9 @@
 
 class Command {
 public:
-    virtual void fireUpFalconHeavy();
-    virtual void fireUpFalconNine();
-    virtual void abort();
+    virtual void fireUpFalconHeavy() = 0 ;
+    virtual void fireUpFalconNine() = 0 ;
+    virtual void abort()= 0;
 };
 
 

@@ -13,7 +13,6 @@ public:
     void add(Engine*, int stage){}; //remove
     void print();
     void remove();
-    void getStageState(){}; //remove
 private:
     FalconRocket* satellite;
 };

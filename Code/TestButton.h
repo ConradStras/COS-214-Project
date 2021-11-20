@@ -9,7 +9,7 @@
 using namespace std;
 
 class TestButton : public Button{
-    void press();
+    void press(){};
 
 };
 

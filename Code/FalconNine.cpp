@@ -2,7 +2,9 @@
 // Created by Conrad Strasheim on 2021/11/15.
 //
 
+
 #include "FalconNine.h"
+using namespace std;
 
 FalconNine::FalconNine() {
     stages[0] = new FirstStage(9);
@@ -43,10 +45,9 @@ void FalconNine::remove() {
 
 }
 
-void FalconNine::getStageState() {
-
+void FalconNine::getStageStatus() {
+    FalconRocket::getStageStatus();
 }
-
 void FalconNine::launch(int stageNo) {
     FalconRocket::launch(stageNo);
 }

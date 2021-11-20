@@ -13,7 +13,7 @@ public:
     // State things
     FirstStage(int nineorheavy);
     FirstStage(int nineorheavy, int EngineNo, State* eState, State* lState);
-    string currentStatus();
+    void currentStatus();
     void increaseEngineCount();
     void handleChange(FalconRocket*);
     // Stage things, strategy design pattern

@@ -12,11 +12,10 @@ class Stage: public State{
 
 public:
     virtual void handleChange(FalconRocket *) = 0;
-    virtual string currentStatus() = 0;
+    virtual void currentStatus() = 0;
     virtual void increaseEngineCount() = 0;
     virtual void printContents() = 0;
     //Getters and setters.
-
     virtual State * getPayloadState();
     virtual void setPayloadState(State* state);
     virtual State * getEngineState();

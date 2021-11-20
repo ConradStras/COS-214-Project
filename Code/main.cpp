@@ -1,6 +1,7 @@
 //
 // Created by Conrad Strasheim on 2021/11/15.
 //
+#include "iostream"
 #include "FalconRocket.h"
 #include "FalconHeavy.h"
 #include "FalconNine.h"
@@ -40,7 +41,8 @@ int main(){
     f2->add(e2->first,2);
     f2->print();
 
-//    f1->getStageState();
+//    f1->getStageStatus();
+    f1->getStageStatus();
     //added a vacuum engine as well, works as well.
 
     return 0;
