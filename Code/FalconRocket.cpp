@@ -21,7 +21,7 @@ void FalconRocket::add(vector<Engine *>, int stage) {
 //stageNo 0 = First Stage, 1 = Second Stage, 2 = Both stages.
 void FalconRocket::launch(int stageNo) {
     if(stageNo == 0) stages[0]->handleChange(this);
-    if(stageNo == 1) stages[1]->handleChange(this);
+    else if(stageNo == 1) stages[1]->handleChange(this);
     else{
         stages[0]->handleChange(this);
         stages[1]->handleChange(this);

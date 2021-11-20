@@ -39,9 +39,11 @@ int main(){
     f2->add(e2->first,2);
     f2->print();
 
-//    f1->getStageStatus();
     f1->getStageStatus();
-    //added a vacuum engine as well, works as well.
+    f1->launch(0);
+    f1->getStageStatus();
+    f1->launch(1);
+    f1->getStageStatus();
 
     return 0;
 }

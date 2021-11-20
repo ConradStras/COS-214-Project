@@ -31,11 +31,7 @@ void FirstStage::handleChange(FalconRocket* rocket) {
     Stage::getEngineState()->handleChange(rocket);
     Stage::getLaunchState()->handleChange(rocket);
     rocket->setStageState(new FirstStage(NineOrHeavy, Stage::getEngineNo(),
-                    Stage::getEngineState(), Stage::getLaunchState()),1);
-}
-
-void FirstStage::printContents() {
-
+                    Stage::getEngineState(), Stage::getLaunchState()),0);
 }
 
 void FirstStage::fire() {
@@ -48,7 +44,6 @@ FirstStage::~FirstStage() {
 }
 
 void FirstStage::currentStatus() { //heavy == 0 Nine == 9
-    //very basic, still needs to be updated for each state inside this stage.
     if(NineOrHeavy == 9){ //we need 9 merlin Engines.
         if(Stage::getEngineNo() == 9) buildComplete = true;
     }
