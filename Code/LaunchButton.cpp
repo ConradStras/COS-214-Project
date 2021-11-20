@@ -3,3 +3,13 @@
 //
 
 #include "LaunchButton.h"
+
+void LaunchButton::pressLaunchHeavy() {
+
+    command->fireUpFalconHeavy();
+}
+
+void LaunchButton::pressLaunchNine() {
+
+    command->fireUpFalconNine();
+}
