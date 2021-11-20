@@ -24,6 +24,7 @@ public:
     virtual void createMemento();
     virtual void setMemento();
     virtual void setStageState(Stage*, int stageno);
+    virtual Stage * getStage(int stageNo);
     virtual void launch(int stageNo);//command DP, state DP (change method).
 protected:
     // a stage is a (stage class) and a state.

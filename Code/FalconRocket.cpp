@@ -40,3 +40,7 @@ void FalconRocket::getStageState() {
     stages[0]->currentStatus();
     stages[1]->currentStatus();
 }
+
+Stage * FalconRocket::getStage(int stageNo) {
+    return stages[stageNo];
+}
