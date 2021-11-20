@@ -3,3 +3,18 @@
 //
 
 #include "Button.h"
+
+void Button::pressFireUpHeavy() {
+
+    command->fireUpFalconHeavy();
+}
+
+void Button::pressFireUpNine() {
+
+    command->fireUpFalconNine();
+}
+
+void Button::pressTest() {
+
+
+}

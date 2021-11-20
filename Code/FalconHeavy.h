@@ -11,7 +11,7 @@ class FalconHeavy: public FalconRocket{
     // so that it can access the private members in falconRocket.
     friend class FalconRocket;
 public:
-    FalconHeavy();
+    FalconHeavy(const string& name);
     ~FalconHeavy();
     void add(vector<Engine*>, int stage);
     void launch(int stageNo);

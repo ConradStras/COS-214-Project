@@ -26,17 +26,20 @@ public:
     virtual void setMemento();
     virtual void setStageState(Stage*, int stageno);
     virtual Stage * getStage(int stageNo);
+    virtual void setName(string name);
     virtual void launch(int stageNo);//command DP, state DP (change method).
     virtual ~FalconRocket();
 protected:
     // a stage is a (stage class) and a state.
     // stage = strategy and state DPs.
     Stage * stages[2];
+    string name;
     // therefore the rocket takes the context role of the state DP
     vector<Engine*> FirstStageEngines; //not sure about this yet. This seems lekker, rounds off composite DP.
     vector<Engine*> SecondStageEngines;
     vector<Satellite*> satellites;
 private:
+
     Memento * savedState;
     int noSatellites;
     //adding these to facilitate easy workings for state changes.

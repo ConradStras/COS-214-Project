@@ -11,7 +11,7 @@ class Satellite;
 class FalconNine: public FalconRocket{
     // so that it can access the private members in falcon rocket
 public:
-    FalconNine();
+    FalconNine(const string& name);
     ~FalconNine();
     void getStageStatus();
     void add(vector<Engine*>, int stage);

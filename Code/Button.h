@@ -4,12 +4,19 @@
 
 #ifndef COS_214_PROJECT_BUTTON_H
 #define COS_214_PROJECT_BUTTON_H
+#include "Command.h"
 
+using namespace std;
 
 class Button {
+public:
+    void pressFireUpHeavy();
+    void pressFireUpNine();
+    void pressTest();
 
-    virtual void press() = 0;
+private:
 
+    Command* command;
 };
 
 

@@ -29,7 +29,7 @@ void FalconRocket::launch(int stageNo) {
 }
 
 void FalconRocket::getStageStatus() {
-    cout<<"The status of the Falcon Rocket:"<<endl;
+    cout<<"The status of the Falcon Rocket: "<<name<<endl;
     cout<<"==================================================================="<<endl;
     cout<< "The Falcon Rocket's first stage status is:"<<endl;
     stages[0]->currentStatus();
@@ -55,3 +55,8 @@ FalconRocket::~FalconRocket() {
 //this needs to be implemented for Engine and stage deletion, might be tricky.
 
 }
+
+void FalconRocket::setName(string name) {
+    this->name = name;
+}
+
