@@ -28,14 +28,6 @@ void FalconRocket::launch(int stageNo) {
     }
 }
 
-void FalconRocket::createMemento() {
-
-}
-
-void FalconRocket::setMemento() {
-
-}
-
 void FalconRocket::getStageStatus() {
     stages[0]->currentStatus();
     stages[1]->currentStatus();

@@ -12,8 +12,6 @@ public:
     virtual Engine* clone(); //implemented in concrete classes
     virtual void add(Engine*, int stage);
     void remove();
-    void getStageState(){}; //???
-
     vector<Engine*> first;
     vector<Engine*> second;
 };
