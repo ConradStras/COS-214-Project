@@ -4,11 +4,13 @@
 
 #ifndef COS_214_PROJECT_DRAGONFACTORY_H
 #define COS_214_PROJECT_DRAGONFACTORY_H
-
-
+#include "SpaceXFactory.h"
+#include "CrewDragon.h"
+#include "DragonSpacecraft.h"
 class DragonFactory:public SpaceXFactory{
-//    Engine* createEngine(string e);
-//    Dragon* createDragon(string d);
+public:
+    Engine* createEngine(string e);
+    Dragon* createDragon(string d);
 };
 
 

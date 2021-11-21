@@ -14,6 +14,9 @@
 #include "CrewDragon.h"
 #include "Humans.h"
 #include "Cargo.h"
+#include "SpaceXFactory.h"
+#include "EngineFactory.h"
+#include "DragonFactory.h"
 using namespace std;
 
 int main(){
@@ -24,29 +27,40 @@ int main(){
     cout<<endl;
     f2->print();
     cout<<endl;
-    Engine* e1 = new MerlinEngine();
-    Engine* e2 = new MerlinEngine();
-    Engine* e3 = new VacuumEngine();
-    Engine* e4 = new MerlinEngine();
-    Engine* e5 = new MerlinEngine();
+
+    //Engine Factory Method
+    Engine* engine = new Engine();
+    Engine* vacuumEngine = new VacuumEngine();
+
+    SpaceXFactory* factories[2];
+    factories[0] = new EngineFactory();
+    factories[1] = new DragonFactory();
+
+    int num1 = 10;
+    Engine** merlinEngines = new Engine*[num1];
+    for(int i = 0; i<num1; i++){
+        merlinEngines[i] = factories[0]->createEngine("merlin");
+        engine->add(merlinEngines[i],1);
+    }
+    engine->add(vacuumEngine,2);
+
     //add all engines to a singular engine, add that engine to the rocket (for Decorator DP)
-    e1->add(e2,1);
-    e1->add(e3,2);
-    e1->add(e4,1);
-    e1->add(e5,1);
-    //Nice work Charlotte!
-    f1->add(e1->first,1);
-    f1->add(e2->second,2);
-//    f1->add(e1,1);
-//    f1->add(e3, 2);
-//    f1->add(e2,1);
+    f1->add(engine->first,1);
+    f1->add(engine->second,2);
+
+    //adding satellites to Falcon 9
     Satellite* s1 = new Satellite();
-    f1->addSatellite(s1);
+    int numSatellites = 60;
+    Satellite** satellites = new Satellite*[numSatellites];
+    for(int i = 0; i<numSatellites; i++){
+        satellites[i] = s1->clone();
+        f1->addSatellite(satellites[i]);
+    }
 
     f1->print();
     cout<<endl;
-    f2->add(e1->first,1);
-    f2->add(e2->first,2);
+    f2->add(engine->first,1);
+    f2->add(engine->second,2);
     f2->print();
 
     f1->getStageStatus();
@@ -82,5 +96,19 @@ int main(){
         dragons[i]->print();
     }
     //Done testing dragons.
+
+    //Testing for dragon factory
+//    int num2 = 0;
+//    int num3 = 0;
+//
+//    Dragon** crewDragons = new Dragon*[num2];
+//    Dragon** dragonSpacacrafts = new Dragon*[num3];
+//
+//    for(int i = 0; i<num2; i++){
+//        crewDragons[i] = factories[1]->createDragon("crew");
+//    }
+//    for(int i = 0; i<num3; i++){
+//        crewDragons[i] = factories[1]->createDragon("spacecraft");
+//    }
     return 0;
 }
