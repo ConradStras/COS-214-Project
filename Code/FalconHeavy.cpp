@@ -40,10 +40,6 @@ void FalconHeavy::add(vector<Engine*> vec, int stage) {
     }
 }
 
-void FalconHeavy::remove() {
-
-}
-
 void FalconHeavy::getStageStatus() {
     FalconRocket::getStageStatus();
 }

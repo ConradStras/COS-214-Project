@@ -8,7 +8,6 @@
 class Satellite{ //Prototype in Prototype DP
 public:
     Satellite* clone();
-    void remove();
 };
 
 

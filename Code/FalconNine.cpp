@@ -43,9 +43,6 @@ void FalconNine::add(vector<Engine*> vec, int stage) {
     }
 }
 
-void FalconNine::remove() {
-
-}
 
 void FalconNine::getStageStatus() {
     FalconRocket::getStageStatus();

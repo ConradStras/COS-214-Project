@@ -6,8 +6,9 @@
 #define COS_214_PROJECT_DRAGONFACTORY_H
 
 
-class DragonFactory {
-
+class DragonFactory:public SpaceXFactory{
+//    Engine* createEngine(string e);
+//    Dragon* createDragon(string d);
 };
 
 

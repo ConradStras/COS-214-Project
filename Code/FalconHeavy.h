@@ -15,7 +15,6 @@ public:
     ~FalconHeavy();
     void add(vector<Engine*>, int stage);
     void launch(int stageNo);
-    void remove();
     void print();
     void getStageStatus();
 };

@@ -17,7 +17,6 @@ public:
     void add(vector<Engine*>, int stage);
     void addSatellite(Satellite* s);
     void launch(int stageNo);
-    void remove();
     void print();
 
 protected:

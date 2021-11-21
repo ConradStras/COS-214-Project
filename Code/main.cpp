@@ -56,5 +56,31 @@ int main(){
 
     button->pressFireUpNine();
 
+    //for Abstract factory and factory:
+//    Engine* engine = new Engine();
+//    SpaceXFactory* factories = new SpaceXFactory[2];
+//    factories[0] = new EngineFactory();
+//    factories[1] = new DragonFactory();
+//
+//    int num1 = 10;
+//    Engine** merlinEngines = new Engine*[num1];
+//    for(int i = 0; i<num1; i++){
+//        merlinEngines[i] = factories[0]->createEngine("merlin");
+//        engine->add(merlinEngines[i],1);
+//    }
+//
+//    int num2 = 0;
+//    int num3 = 0;
+//
+//    Dragon** crewDragons = new Dragon*[num2];
+//    Dragon** dragonSpacacrafts = new Dragon*[num3];
+//
+//    for(int i = 0; i<num2; i++){
+//        crewDragons[i] = factories[1]->createDragon("crew");
+//    }
+//    for(int i = 0; i<num3; i++){
+//        crewDragons[i] = factories[1]->createDragon("spacecraft");
+//    }
+
     return 0;
 }

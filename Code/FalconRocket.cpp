@@ -63,6 +63,6 @@ Memento FalconRocket::createMemento() {
 }
 
 void FalconRocket::addSatellite(Satellite *) {
-
+    //implemented in Falcon Nine only
 }
 

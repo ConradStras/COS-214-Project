@@ -5,9 +5,12 @@
 #ifndef COS_214_PROJECT_SPACEXFACTORY_H
 #define COS_214_PROJECT_SPACEXFACTORY_H
 
-
-class SpaceXFactory {
-
+class Engine;
+class Dragon;
+class SpaceXFactory{
+//    virtual Engine* createEngine(string e)=0;
+////    virtual Satellite* createSatellite(); implement with clone to demonstrate prototype
+//    virtual Dragon* createDragon(string d)=0;
 };
 
 
