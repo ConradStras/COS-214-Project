@@ -4,6 +4,10 @@
 
 #include "Button.h"
 
+Button::Button(Command *c) {
+    command = c;
+}
+
 void Button::pressFireUpHeavy() {
 
     command->fireUpFalconHeavy();

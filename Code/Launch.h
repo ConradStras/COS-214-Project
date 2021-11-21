@@ -11,6 +11,8 @@ class Launch : public Command{
 private:
     FalconRocket* rocket;
 public:
+
+    Launch(FalconRocket* );
     void abort(){};
     void fireUpFalconHeavy();
     void fireUpFalconNine();

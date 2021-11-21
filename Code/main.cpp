@@ -7,6 +7,10 @@
 #include "FalconNine.h"
 #include "MerlinEngine.h"
 #include "VacuumEngine.h"
+#include "Command.h"
+#include "Button.h"
+#include "Launch.h"
+
 using namespace std;
 
 int main(){
@@ -44,6 +48,11 @@ int main(){
     f1->getStageStatus();
     f1->launch(1);
     f1->getStageStatus();
+
+    Command *command = new Launch(f1);
+    Button* button= new Button(command);
+
+    button->pressFireUpNine();
 
     return 0;
 }

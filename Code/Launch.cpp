@@ -4,6 +4,11 @@
 
 #include "Launch.h"
 //
+
+Launch::Launch(FalconRocket *r) {
+
+    rocket = r;
+}
 void Launch::fireUpFalconHeavy() {
 
     if( rocket->getStage(0)->getEngineNo()== 27 && rocket->getStage(1)->getEngineNo() == 1) {

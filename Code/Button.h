@@ -10,6 +10,7 @@ using namespace std;
 
 class Button {
 public:
+    Button(Command* );
     void pressFireUpHeavy();
     void pressFireUpNine();
     void pressTest();
