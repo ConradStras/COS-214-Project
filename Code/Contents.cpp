@@ -6,19 +6,27 @@
 #include "Contents.h"
 #include <iostream>
 
-Contents::Contents() {
+using namespace std;
+Contents::Contents(const string& type) : type(type) {
     this->content = NULL;
-    cout << "CONTENTS CONSTRUCTOR\n";
 }
 
 Contents::~Contents() {
     cout << "CONTENTS DESTRUCTOR\n";
 }
 
-void Contents::add(Dragon* dragonContent) {
-     if(content == NULL) {
-        this->content = dragonContent;
-    } else {
-        (this->content)->add(dragonContent);
+void Contents::add(Contents* dragonContent) {
+    if(content == nullptr) content = dragonContent;
+    else{
+        content->add(dragonContent);
     }
 }
+
+void Contents::print() {
+    cout<<Contents::getType();
+}
+
+const string &Contents::getType() const {
+    return type;
+}
+

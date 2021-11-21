@@ -6,16 +6,21 @@
 #ifndef COS_214_PROJECT_DRAGON_H
 #define COS_214_PROJECT_DRAGON_H
 #include "SpaceXProperty.h"
-
-
+using namespace std;
+class Contents;
 class Dragon : public SpaceXProperty {    //INHERIT FROM SPACE X PROPERTY?
-    public: 
-        Dragon();
-        ~Dragon();
-        void add(Dragon*);
-        void handleContent(Dragon*);
-    private:
-        Dragon* next;
+public:
+    Dragon(string type);
+    ~Dragon();
+    virtual void addDelegator(Dragon * nextD);
+    virtual void print();
+    virtual void handleContent(Contents *);
+private:
+    vector<Contents*> allTheContent;
+    string type;
+    Dragon * nextDragon;
+protected:
+    virtual void add(Contents* );
 };
 
 

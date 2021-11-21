@@ -12,8 +12,6 @@ class Humans : public Contents{
     public:    
         Humans();
         ~Humans();
-    private:
-        string type;
 };
 
 

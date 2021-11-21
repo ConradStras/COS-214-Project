@@ -6,10 +6,7 @@
 #include "Humans.h"
 #include <iostream>
 
-Humans::Humans() {
-    this->type = "Humans";
-    cout << "HUMANS CONSTRUCTOR\n";
-}
+Humans::Humans() : Contents("Humans") {}
 
 Humans::~Humans() {
     cout << "HUMANS DESTRUCTOR\n";
