@@ -13,6 +13,7 @@ public:
     void increaseEngineCount();
     void increaseSatelliteCount();
     ~SecondStage();
+    int getNoH();
     // State things
     void currentStatus();
     //fires the entire second stage, i.e. depositPayload and fire.

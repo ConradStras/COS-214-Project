@@ -16,6 +16,7 @@ public:
     void currentStatus();
     void increaseEngineCount();
     void handleChange(FalconRocket*);
+    int getNoH();
     // Stage things, strategy design pattern
     // fire changes the launch state
     void fire();

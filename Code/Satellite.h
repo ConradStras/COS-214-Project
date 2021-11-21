@@ -5,10 +5,10 @@
 #ifndef COS_214_PROJECT_SATELLITE_H
 #define COS_214_PROJECT_SATELLITE_H
 
-class Satellite{ //Decorator in Decorator DP, Prototype in Prototype DP
+class Satellite{ //Prototype in Prototype DP
 public:
-//    Satellite* clone();
-//    void remove();
+    Satellite* clone();
+    void remove();
 };
 
 

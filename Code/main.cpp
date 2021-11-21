@@ -10,7 +10,6 @@
 #include "Command.h"
 #include "Button.h"
 #include "Launch.h"
-
 using namespace std;
 
 int main(){
@@ -37,6 +36,9 @@ int main(){
 //    f1->add(e1,1);
 //    f1->add(e3, 2);
 //    f1->add(e2,1);
+    Satellite* s1 = new Satellite();
+    f1->addSatellite(s1);
+
     f1->print();
     cout<<endl;
     f2->add(e1->first,1);

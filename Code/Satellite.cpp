@@ -4,11 +4,11 @@
 
 #include "Satellite.h"
 
-//Satellite* Satellite::clone() {
-//    return new Satellite();
-//}
-//
-//void Satellite::remove() {
-//
-//}
+Satellite* Satellite::clone() {
+    return new Satellite();
+}
+
+void Satellite::remove() {
+
+}
 

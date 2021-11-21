@@ -62,4 +62,7 @@ Memento FalconRocket::createMemento() {
     mem = new Memento(stages[0], stages[1]);
 }
 
+void FalconRocket::addSatellite(Satellite *) {
+
+}
 

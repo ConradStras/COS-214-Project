@@ -18,6 +18,7 @@ FalconNine::~FalconNine() {
 
 void FalconNine::print() {
     cout<<"Falcon 9: "<<endl;
+    cout<<"Satellite count: "<<noSatellites<<endl;
     FalconRocket::print();
 }
 
@@ -51,6 +52,13 @@ void FalconNine::getStageStatus() {
 }
 void FalconNine::launch(int stageNo) {
     FalconRocket::launch(stageNo);
+}
+
+void FalconNine::addSatellite(Satellite *s) {
+    if(noSatellites<60){
+        satellites.push_back(s);
+        noSatellites++;
+    }
 }
 
 

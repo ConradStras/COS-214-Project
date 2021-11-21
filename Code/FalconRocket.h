@@ -13,12 +13,13 @@
 #include "Memento.h"
 #include "SpaceXProperty.h"
 #include "Launch.h"
-
+#include "Satellite.h"
 
 using namespace std;
 class Engine;
 class Stage;
 class Memento;
+class Satellite;
 //Originator in Memento DP.
 class FalconRocket: public SpaceXProperty { //Component in Decorator DP
 public:
@@ -32,6 +33,7 @@ public:
     virtual Stage * getStage(int stageNo);
     virtual void setName(string name);
     virtual void launch(int stageNo);//command DP, state DP (change method).
+    virtual void addSatellite(Satellite*);
     virtual ~FalconRocket();
 protected:
     // a stage is a (stage class) and a state.
