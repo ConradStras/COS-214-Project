@@ -59,6 +59,8 @@ void FalconNine::addSatellite(Satellite *s) {
         satellites.push_back(s);
         noSatellites++;
     }
+    else
+        cout<<"No more than 60 satellites can be launched to Low Earth Orbit."<<endl;
 }
 
 
