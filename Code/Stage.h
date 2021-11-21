@@ -24,6 +24,12 @@ public:
     int getEngineNo();
     void setEngineNo(int no);
     virtual ~Stage();
+
+protected:
+    int NineOrHeavy;
+public:
+    int getNoH() const;
+
 private:
     int noEngines;
     State * payloadState;

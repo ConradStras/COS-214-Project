@@ -23,6 +23,10 @@ FirstStage::FirstStage(int nineorheavy, int EngineNo, State* eState, State * lSt
     Stage::setPayloadState(nullptr);
 }
 
+int FirstStage::getNoH(){
+    return NineOrHeavy;
+}
+
 void FirstStage::increaseEngineCount() {
     Stage::setEngineNo(Stage::getEngineNo()+1);
 }
