@@ -4,23 +4,21 @@
 // Edited by Nikita Oelofse on 2021/11/19
 
 #include "Dragon.h"
+#include <iostream>
 
 Dragon::Dragon() {
-
+    cout << "DRAGON CONSTRUCTOR\n";
 }
 
 Dragon::~Dragon() {
-
+    cout << "DRAGON DESTRUCTOR\n";
 }
 
 void Dragon::add(Dragon*) {
-
 }
 
-void Dragon::remove() { //NOT SURE IF NECESSARY
-
-}
-
-void Dragon::handleContent() {
-
+void Dragon::handleContent(Dragon* content) {
+    if(next) {
+        next->handleContent(content);
+    }
 }

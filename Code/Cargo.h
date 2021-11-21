@@ -6,11 +6,14 @@
 #ifndef COS_214_PROJECT_CARGO_H
 #define COS_214_PROJECT_CARGO_H
 #include "Contents.h"
+#include <string>
 
 class Cargo : public Contents {
     public: 
         Cargo();
         ~Cargo();
+    private:
+        string type;
 };
 
 

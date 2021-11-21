@@ -11,7 +11,7 @@ class CrewDragon : public Dragon {
     public: 
         CrewDragon();
         ~CrewDragon();
-        void handleContent();
+        void handleContent(Dragon*);
 };
 
 

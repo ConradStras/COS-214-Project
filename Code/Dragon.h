@@ -5,15 +5,15 @@
 
 #ifndef COS_214_PROJECT_DRAGON_H
 #define COS_214_PROJECT_DRAGON_H
+#include "SpaceXProperty.h"
 
 
-class Dragon {    //INHERIT FROM SPACE X PROPERTY?
+class Dragon : public SpaceXProperty {    //INHERIT FROM SPACE X PROPERTY?
     public: 
         Dragon();
         ~Dragon();
         void add(Dragon*);
-        void remove(); //NOT SURE IF NECESSARY
-        void handleContent();
+        void handleContent(Dragon*);
     private:
         Dragon* next;
 };

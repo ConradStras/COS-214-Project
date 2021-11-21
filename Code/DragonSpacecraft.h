@@ -11,7 +11,7 @@ class DragonSpacecraft : public Dragon {
     public:
         DragonSpacecraft();
         ~DragonSpacecraft();
-        void handleContent();
+        void handleContent(Dragon*);
 };
 
 

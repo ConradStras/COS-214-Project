@@ -6,11 +6,14 @@
 #ifndef COS_214_PROJECT_HUMANS_H
 #define COS_214_PROJECT_HUMANS_H
 #include "Contents.h"
+#include <string>
 
 class Humans : public Contents{
     public:    
         Humans();
         ~Humans();
+    private:
+        string type;
 };
 
 
