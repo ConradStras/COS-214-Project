@@ -7,14 +7,12 @@
 #include "Command.h"
 #include "FalconRocket.h"
 class Launch : public Command{
-
 private:
     FalconRocket* rocket;
 public:
     void abort(){};
     void fireUpFalconHeavy();
     void fireUpFalconNine();
-
 };
 
 

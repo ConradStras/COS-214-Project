@@ -65,3 +65,7 @@ SecondStage::SecondStage(int nineorheavy, int EngineNo, State *eState, State *lS
     Stage::setEngineNo(EngineNo);
     Stage::setPayloadState(pState);
 }
+
+int SecondStage::getNoH() {
+    return NineOrHeavy;
+}

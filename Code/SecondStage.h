@@ -15,7 +15,7 @@ public:
     ~SecondStage();
     // State things
     void currentStatus();
-    //fires the entire second stage, i.e. deposit payload and fire.
+    //fires the entire second stage, i.e. depositPayload and fire.
     void handleChange(FalconRocket *);
     // fires the engine, changing its state.
     void fire();
@@ -23,7 +23,6 @@ public:
     void depositPayload();
 
 private:
-    int NineOrHeavy;
     int noSatellites;
     bool buildComplete;
 };
