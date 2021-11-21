@@ -7,11 +7,12 @@
 #define COS_214_PROJECT_CREWDRAGON_H
 #include "Dragon.h"
 
+using namespace std;
 class CrewDragon : public Dragon {
     public: 
-        CrewDragon();
+        CrewDragon(string type);
         ~CrewDragon();
-        void handleContent(Dragon*);
+        void handleContent(Contents *);
 };
 
 

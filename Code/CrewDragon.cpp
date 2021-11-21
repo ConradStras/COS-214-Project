@@ -5,8 +5,8 @@
 
 #include "CrewDragon.h"
 #include <iostream>
-
-CrewDragon::CrewDragon() {
+#include "Contents.h"
+CrewDragon::CrewDragon(string type)  : Dragon(type){
     cout << "CREWDRAGON CONSTRUCTOR\n";
 }
 
@@ -14,12 +14,11 @@ CrewDragon::~CrewDragon() {
     cout << "CREWDRAGON DESTRUCTOR\n";
 }
 
-void CrewDragon::handleContent(Dragon* content) {
-    if(content.type == "Humans") {
+void CrewDragon::handleContent(Contents *content) {
+    if(content->getType() == "Humans") {
         cout << "Humans boarded CrewDragon.\n";
-    } else if(content.type == "Cargo") {
-        cout << "Cargo loaded onto CrewDragon.\n"; 
-    } else {
-       Dragon::handleRequest(content);
+    } else if(content->getType() == "Cargo") {
+        cout << "Cargo loaded onto CrewDragon.\n";
     }
+    Dragon::add(content);
 }

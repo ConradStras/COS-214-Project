@@ -10,6 +10,10 @@
 #include "Command.h"
 #include "Button.h"
 #include "Launch.h"
+#include "DragonSpacecraft.h"
+#include "CrewDragon.h"
+#include "Humans.h"
+#include "Cargo.h"
 using namespace std;
 
 int main(){
@@ -55,32 +59,28 @@ int main(){
     Button* button= new Button(command);
 
     button->pressFireUpNine();
-
-    //for Abstract factory and factory:
-//    Engine* engine = new Engine();
-//    SpaceXFactory* factories = new SpaceXFactory[2];
-//    factories[0] = new EngineFactory();
-//    factories[1] = new DragonFactory();
-//
-//    int num1 = 10;
-//    Engine** merlinEngines = new Engine*[num1];
-//    for(int i = 0; i<num1; i++){
-//        merlinEngines[i] = factories[0]->createEngine("merlin");
-//        engine->add(merlinEngines[i],1);
-//    }
-//
-//    int num2 = 0;
-//    int num3 = 0;
-//
-//    Dragon** crewDragons = new Dragon*[num2];
-//    Dragon** dragonSpacacrafts = new Dragon*[num3];
-//
-//    for(int i = 0; i<num2; i++){
-//        crewDragons[i] = factories[1]->createDragon("crew");
-//    }
-//    for(int i = 0; i<num3; i++){
-//        crewDragons[i] = factories[1]->createDragon("spacecraft");
-//    }
-
+    // Testing dragons.
+    Contents * arrHumansAndCargo[20];
+    for (int i = 0; i < 20; ++i) {
+        if (i % 2 == 0) arrHumansAndCargo[i] = new Humans();
+        else arrHumansAndCargo[i] = new Cargo();
+    }
+    Dragon * dragons[6];
+    for (int i = 0; i < 6; ++i) {
+        if(i % 2 == 0) {
+            dragons[i] = new DragonSpacecraft("Space Dragon " + to_string(i));
+        }
+        else dragons[i] = new CrewDragon("Crew Dragon "  + to_string(i));
+    }
+    dragons[0]->addDelegator(dragons[1]);
+    dragons[2]->addDelegator(dragons[3]);
+    dragons[4]->addDelegator(dragons[5]);
+    for (int i = 1 ; i < 6; ++i) {
+        for (int j = 0; j < 20; ++j) {
+            dragons[i]->handleContent(arrHumansAndCargo[j]);
+        }
+        dragons[i]->print();
+    }
+    //Done testing dragons.
     return 0;
 }
