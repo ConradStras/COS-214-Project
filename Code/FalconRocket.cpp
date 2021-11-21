@@ -21,7 +21,7 @@ void FalconRocket::add(vector<Engine *>, int stage) {
 //stageNo 0 = First Stage, 1 = Second Stage, 2 = Both stages.
 void FalconRocket::launch(int stageNo) {
     if(stageNo == 0) stages[0]->handleChange(this);
-    if(stageNo == 1) stages[1]->handleChange(this);
+    else if(stageNo == 1) stages[1]->handleChange(this);
     else{
         stages[0]->handleChange(this);
         stages[1]->handleChange(this);
@@ -43,14 +43,6 @@ Stage * FalconRocket::getStage(int stageNo) {
     return stages[stageNo];
 }
 
-void FalconRocket::createMemento() {
-
-}
-
-void FalconRocket::setMemento() {
-
-}
-
 FalconRocket::~FalconRocket() {
 //this needs to be implemented for Engine and stage deletion, might be tricky.
 
@@ -59,4 +51,15 @@ FalconRocket::~FalconRocket() {
 void FalconRocket::setName(string name) {
     this->name = name;
 }
+
+void FalconRocket::reinstateMemento() {
+    stages[0] = mem->stages[0];
+    stages[1] = mem->stages[1];
+}
+
+
+Memento FalconRocket::createMemento() {
+    mem = new Memento(stages[0], stages[1]);
+}
+
 

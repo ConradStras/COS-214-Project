@@ -9,22 +9,20 @@
 class SecondStage :public Stage{
 public:
     SecondStage(int nineorheavy);
+    SecondStage(int nineorheavy, int EngineNo, State* eState, State* lState, State* pState);
     void increaseEngineCount();
     void increaseSatelliteCount();
     ~SecondStage();
     // State things
     void currentStatus();
-    //make FalconRocket a friend class to facilitate changes.
+    //fires the entire second stage, i.e. depositPayload and fire.
     void handleChange(FalconRocket *);
-    //Stage things
-    void printContents();
     // fires the engine, changing its state.
     void fire();
     // deposit's the payload in space, changing its state.
     void depositPayload();
 
 private:
-    int NineOrHeavy;
     int noSatellites;
     bool buildComplete;
 };

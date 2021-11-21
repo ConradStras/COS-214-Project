@@ -38,3 +38,7 @@ void Stage::setEngineState(State *state) {
 }
 
 Stage::~Stage() {}
+
+int Stage::getNoH() const {
+    return NineOrHeavy;
+}

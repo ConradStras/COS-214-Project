@@ -12,18 +12,22 @@
 #include "SecondStage.h"
 #include "Memento.h"
 #include "SpaceXProperty.h"
+#include "Launch.h"
+
+
 using namespace std;
 class Engine;
-class Satellite;
 class Stage;
+class Memento;
+//Originator in Memento DP.
 class FalconRocket: public SpaceXProperty { //Component in Decorator DP
 public:
     virtual void add(vector<Engine*>, int stage);
     virtual void print(); //print engines + totals? Works nicely. Changed this from pure virtual to virtual.
     virtual void remove()= 0;
     virtual void getStageStatus();
-    virtual void createMemento();
-    virtual void setMemento();
+    virtual Memento createMemento();//I made three mementos, so that we have three simulations.
+    virtual void reinstateMemento();
     virtual void setStageState(Stage*, int stageno);
     virtual Stage * getStage(int stageNo);
     virtual void setName(string name);
@@ -37,13 +41,12 @@ protected:
     // therefore the rocket takes the context role of the state DP
     vector<Engine*> FirstStageEngines; //not sure about this yet. This seems lekker, rounds off composite DP.
     vector<Engine*> SecondStageEngines;
-    vector<Satellite*> satellites;
 private:
 
-    Memento * savedState;
-    int noSatellites;
+    Memento * mem;
     //adding these to facilitate easy workings for state changes.
     //int noEngines;
+    //int noSatellites;
     //moved the above to the stages, as the state changes need to occur within the DP.
 
 };

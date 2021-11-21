@@ -14,7 +14,6 @@ public:
     virtual void handleChange(FalconRocket *) = 0;
     virtual void currentStatus() = 0;
     virtual void increaseEngineCount() = 0;
-    virtual void printContents() = 0;
     //Getters and setters.
     virtual State * getPayloadState();
     virtual void setPayloadState(State* state);
@@ -25,6 +24,12 @@ public:
     int getEngineNo();
     void setEngineNo(int no);
     virtual ~Stage();
+
+protected:
+    int NineOrHeavy;
+public:
+    int getNoH() const;
+
 private:
     int noEngines;
     State * payloadState;
