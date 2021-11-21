@@ -1,8 +1,9 @@
 #ifndef COS_214_PROJECT_ENGINEER_H
 #define COS_214_PROJECT_ENGINEER_H
 
+#include "Observer.h"
 
-class Engineer {
+class Engineer: public Observer {
 
 };
 
