@@ -5,7 +5,7 @@
 
 #include "FalconNine.h"
 using namespace std;
-
+///@param name Unique name of FalconNine.
 FalconNine::FalconNine(const string& name) {
     FalconRocket::setName(name);
     stages[0] = new FirstStage(9);
@@ -22,6 +22,8 @@ void FalconNine::print() {
     FalconRocket::print();
 }
 
+///@param vec Vector of engines to be added to the Falcon 9
+///@param stage An integer to specify if engines form part of stage 1 or stage 2
 void FalconNine::add(vector<Engine*> vec, int stage) {
     for(int i =0; i<vec.size(); i++){
         if(stage==1){
@@ -48,10 +50,12 @@ void FalconNine::add(vector<Engine*> vec, int stage) {
 void FalconNine::getStageStatus() {
     FalconRocket::getStageStatus();
 }
+///@param stageNo An integer to specify what stage must be launched
 void FalconNine::launch(int stageNo) {
     FalconRocket::launch(stageNo);
 }
 
+///@param s A Satellite to be added to the satellite vector on a Falcon 9
 void FalconNine::addSatellite(SpaceXProperty *s) {
     if(noSatellites<60){
         satellites.push_back(s);

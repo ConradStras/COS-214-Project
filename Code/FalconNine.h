@@ -8,8 +8,14 @@
 #include "FirstStage.h"
 #include "SecondStage.h"
 
+///@brief Representation of Falcon 9 Rocket, a type of Falcon Rocket.
+///@details Will be decorated with Engines to simulate stage 1 and stage 2 of launch
+///         Contains satellite vectors to simulate satellite clusters in Low Orbit Launch
+///@author Charlotte,Conrad
+///@version Final
+
 class FalconNine: public FalconRocket{
-    // so that it can access the private members in falcon rocket
+
 public:
     FalconNine(const string& name);
     ~FalconNine();
