@@ -42,3 +42,7 @@ Stage::~Stage() {}
 int Stage::getNoH() const {
     return NineOrHeavy;
 }
+
+void Stage::addEngine(Engine* e) {
+    engines.push_back(e);
+}

@@ -29,24 +29,35 @@ int main(){
     cout<<endl;
 
     //Engine Factory Method
-    Engine* engine = new Engine();
+    Engine* falconNineEngines = new Engine();
+    Engine* falconHeavyEngines = new Engine();
+
     Engine* vacuumEngine = new VacuumEngine();
+    Engine* vacuumEngineHeavy = new VacuumEngine;
 
     SpaceXFactory* factories[2];
     factories[0] = new EngineFactory();
     factories[1] = new DragonFactory();
 
-    int num1 = 10;
-    Engine** merlinEngines = new Engine*[num1];
-    for(int i = 0; i<num1; i++){
+    int num0 = 10;
+    Engine** merlinEngines = new Engine*[num0];
+    for(int i = 0; i<num0; i++){
         merlinEngines[i] = factories[0]->createEngine("merlin");
-        engine->add(merlinEngines[i],1);
+        falconNineEngines->add(merlinEngines[i],1);
     }
-    engine->add(vacuumEngine,2);
+    falconNineEngines->add(vacuumEngine,2);
+    f1->add(falconNineEngines->first,1);
+    f1->add(falconNineEngines->second,2);
 
-    //add all engines to a singular engine, add that engine to the rocket (for Decorator DP)
-    f1->add(engine->first,1);
-    f1->add(engine->second,2);
+    int num1 = 27;
+    Engine** merlinEnginesHeavy = new Engine*[num1];
+    for(int i = 0; i<num1; i++){
+        merlinEnginesHeavy[i] = factories[0]->createEngine("merlin");
+        falconHeavyEngines->add(merlinEnginesHeavy[i],1);
+    }
+    falconHeavyEngines->add(vacuumEngineHeavy,2);
+    f2->add(falconHeavyEngines->first,1);
+    f2->add(falconHeavyEngines->second,2);
 
     //adding satellites to Falcon 9
     Satellite* s1 = new Satellite();
@@ -59,8 +70,6 @@ int main(){
 
     f1->print();
     cout<<endl;
-    f2->add(engine->first,1);
-    f2->add(engine->second,2);
     f2->print();
 
     f1->getStageStatus();

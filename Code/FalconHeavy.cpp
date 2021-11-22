@@ -15,7 +15,7 @@ FalconHeavy::~FalconHeavy() {
 }
 
 void FalconHeavy::print() {
-    cout<<"Falcon Heavy: "<<endl;
+    cout<<"FALCON HEAVY: "<<getName()<<endl;
     FalconRocket::print();
 }
 
@@ -23,7 +23,7 @@ void FalconHeavy::add(vector<Engine*> vec, int stage) {
     for(int i =0; i<vec.size(); i++){
         if(stage==1){
             if(stages[0]->getEngineNo()<27){
-                FirstStageEngines.push_back(vec.at(i));
+                stages[0]->addEngine(vec.at(i));
                 stages[0]->increaseEngineCount();
             }
             else
@@ -31,7 +31,7 @@ void FalconHeavy::add(vector<Engine*> vec, int stage) {
         }
         else if(stage==2){
             if(stages[1]->getEngineNo()<1){
-                SecondStageEngines.push_back(vec.at(i));
+                stages[1]->addEngine(vec.at(i));
                 stages[1]->increaseEngineCount();
             }
             else

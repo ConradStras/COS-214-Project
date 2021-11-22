@@ -66,3 +66,7 @@ void FalconRocket::addSatellite(Satellite *) {
     //implemented in Falcon Nine only
 }
 
+string FalconRocket::getName() {
+    return name;
+}
+

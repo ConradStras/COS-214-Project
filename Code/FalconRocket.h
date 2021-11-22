@@ -31,6 +31,7 @@ public:
     virtual void setStageState(Stage*, int stageno);
     virtual Stage * getStage(int stageNo);
     virtual void setName(string name);
+    virtual string getName();
     virtual void launch(int stageNo);//command DP, state DP (change method).
     virtual void addSatellite(Satellite*);
     virtual ~FalconRocket();
@@ -40,8 +41,8 @@ protected:
     Stage * stages[2];
     string name;
     // therefore the rocket takes the context role of the state DP
-    vector<Engine*> FirstStageEngines;
-    vector<Engine*> SecondStageEngines;
+//    vector<Engine*> FirstStageEngines;
+//    vector<Engine*> SecondStageEngines;
 private:
 
     Memento * mem;
