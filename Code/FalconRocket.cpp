@@ -66,3 +66,45 @@ void FalconRocket::addSatellite(Satellite *) {
 
 }
 
+//Observer edit
+
+FalconRocket:: ~FalconRocket(){
+    cout<<"Deleting FalconRocket"<<endl;
+}
+
+void FalconRocket :: attach(Observer *observer){
+    list_observer.push_back(observer);
+}
+
+void FalconRocket :: detach(Observer *observer){
+    list_observer.remove(observer);
+}
+
+void FalconRocket :: numberOfObservers(){
+    cout << "There are " << list_observer.size() << " observers in the list."<<endl;
+}
+
+void FalconRocket :: createMessage(string message = "Empty") {
+    this->message = message;
+    notify();
+  }
+
+void FalconRocket :: notify(){
+    list<Observer *>::iterator iterator = list_observer.begin();
+    numberOfObservers();
+    while (iterator != list_observer.end()) {
+      (*iterator)->update(message);
+      ++iterator;
+}
+
+
+
+
+
+
+
+
+
+
+
+
