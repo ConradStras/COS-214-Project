@@ -7,6 +7,9 @@
 
 
 class Observer {
+public:
+  virtual ~Observer(){};
+  virtual void update(const string &message_from_subject) = 0;
 
 };
 

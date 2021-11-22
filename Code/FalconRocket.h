@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <list>
 #include "State.h"
 #include "FirstStage.h"
 #include "SecondStage.h"
@@ -14,6 +15,9 @@
 #include "SpaceXProperty.h"
 #include "Launch.h"
 #include "Satellite.h"
+
+#include "Observer.h"
+
 
 using namespace std;
 class Engine;
@@ -35,6 +39,16 @@ public:
     virtual void setName(string name);
     virtual string getName();
     virtual ~FalconRocket();
+
+
+    //Observer edit
+    virtual void attach(Observer *observer);
+    virtual void detach(Observer *observer);
+    virtual void notify();
+
+    void numberOfObservers();
+    void createMessage(string);
+
 protected:
     // a stage is a (stage class) and a state.
     // stage = strategy and state DPs.
@@ -43,6 +57,25 @@ protected:
     // therefore the rocket takes the context role of the state DP
 private:
     Memento * mem;
+    //adding these to facilitate easy workings for state changes.
+    //int noEngines;
+    //int noSatellites;
+    //moved the above to the stages, as the state changes need to occur within the DP.
+
+    //Observer edit
+    list<Observer *> list_observer;
+    string message;
+
 };
 
 #endif //COS_214_PROJECT_FALCONROCKET_H
+
+
+
+
+
+
+
+
+
+
