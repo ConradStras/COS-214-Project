@@ -4,8 +4,8 @@
 
 #ifndef COS_214_PROJECT_SATELLITE_H
 #define COS_214_PROJECT_SATELLITE_H
-
-class Satellite{ //Prototype in Prototype DP
+#include "SpaceXProperty.h"
+class Satellite:SpaceXProperty{ //Prototype in Prototype DP
 public:
     Satellite* clone();
 };
