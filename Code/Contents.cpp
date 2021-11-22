@@ -7,6 +7,7 @@
 #include <iostream>
 
 using namespace std;
+
 Contents::Contents(const string& type) : type(type) {
     this->content = NULL;
 }

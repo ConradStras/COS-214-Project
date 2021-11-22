@@ -27,7 +27,6 @@ Dragon::Dragon(string type) {
     nextDragon = nullptr;
 }
 
-
 void Dragon::print() {
     cout<<"The Dragon named "<<type<<" has the following content"<<endl;
     vector<Contents*>:: iterator it;

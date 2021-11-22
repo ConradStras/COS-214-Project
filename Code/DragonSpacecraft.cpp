@@ -6,7 +6,9 @@
 #include "DragonSpacecraft.h"
 #include "Contents.h"
 #include <iostream>
+
 using namespace std;
+
 DragonSpacecraft::DragonSpacecraft(string type) : Dragon(type) {}
 
 DragonSpacecraft::~DragonSpacecraft() {

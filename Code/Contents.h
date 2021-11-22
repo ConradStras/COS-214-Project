@@ -14,10 +14,8 @@ class Contents{
         ~Contents();
         void print();
         void add(Contents* dragonContent);
-
-    const string &getType() const;
-
-private:
+        const string &getType() const;
+    private:
         string type;
         Contents* content;
 };

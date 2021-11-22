@@ -6,6 +6,8 @@
 #include "Humans.h"
 #include <iostream>
 
+using namespace std;
+
 Humans::Humans() : Contents("Humans") {}
 
 Humans::~Humans() {
