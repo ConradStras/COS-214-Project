@@ -13,7 +13,6 @@ class Cargo : public Contents {
     public: 
         Cargo();
         ~Cargo();
-        void print();
 };
 
 

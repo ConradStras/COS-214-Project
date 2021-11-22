@@ -40,3 +40,7 @@ void Dragon::print() {
 void Dragon::addDelegator(Dragon *nextD) {
     nextDragon = nextD;
 }
+
+const string &Dragon::getType() const {
+    return type;
+}

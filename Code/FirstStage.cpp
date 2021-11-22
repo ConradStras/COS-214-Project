@@ -23,9 +23,7 @@ FirstStage::FirstStage(int nineorheavy, int EngineNo, State* eState, State * lSt
     Stage::setPayloadState(nullptr);
 }
 
-int FirstStage::getNoH(){
-    return NineOrHeavy;
-}
+
 
 void FirstStage::increaseEngineCount() {
     Stage::setEngineNo(Stage::getEngineNo()+1);
@@ -38,9 +36,6 @@ void FirstStage::handleChange(FalconRocket* rocket) {
                     Stage::getEngineState(), Stage::getLaunchState()),0);
 }
 
-void FirstStage::fire() {
-
-}
 
 FirstStage::~FirstStage() {
 
@@ -61,4 +56,16 @@ void FirstStage::currentStatus() { //heavy == 0 Nine == 9
     if (buildComplete) ss << "Finished Building" <<endl;
     else ss << "Not yet finished building, current engines:"<<Stage::getEngineNo()<<endl;
     cout << ss.str();
+}
+
+FirstStage::FirstStage(int nineorheavy, int EngineNo, State *eState, State *lState, vector<Engine *> engineIn) {
+    NineOrHeavy = nineorheavy;
+    Stage::setEngineState(eState);
+    Stage::setLaunchState(lState);
+    Stage::setEngineNo(EngineNo);
+    Stage::setPayloadState(nullptr);
+    vector<Engine*>:: iterator it;
+    for (it = engineIn.begin(); it != engineIn.end(); ++it) {
+        engines.push_back(*it);
+    }
 }

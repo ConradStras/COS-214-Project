@@ -10,6 +10,7 @@ class SecondStage :public Stage{
 public:
     SecondStage(int nineorheavy);
     SecondStage(int nineorheavy, int EngineNo, State* eState, State* lState, State* pState);
+    SecondStage(int nineorheavy, int EngineNo, State* eState, State* lState, State* pState, vector<Engine*> engines);
     void increaseEngineCount();
     void increaseSatelliteCount();
     ~SecondStage();
@@ -19,9 +20,9 @@ public:
     //fires the entire second stage, i.e. depositPayload and fire.
     void handleChange(FalconRocket *);
     // fires the engine, changing its state.
-    void fire();
+    void fire(FalconRocket *);
     // deposit's the payload in space, changing its state.
-    void depositPayload();
+    void depositPayload(FalconRocket *);
 
 private:
     int noSatellites;

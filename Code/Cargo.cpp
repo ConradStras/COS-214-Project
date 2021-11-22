@@ -14,6 +14,3 @@ Cargo::~Cargo() {
 
 Cargo::Cargo() : Contents("Cargo") {}
 
-void Cargo::print() {
-    Contents::print();
-}

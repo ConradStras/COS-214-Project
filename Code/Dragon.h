@@ -14,13 +14,18 @@ public:
     ~Dragon();
     virtual void addDelegator(Dragon * nextD);
     virtual void print();
+
+    const string &getType() const;
+
     virtual void handleContent(Contents *);
 private:
     vector<Contents*> allTheContent;
-    string type;
     Dragon * nextDragon;
+    string type;
 protected:
     virtual void add(Contents* );
+
+
 };
 
 

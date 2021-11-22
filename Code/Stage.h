@@ -23,6 +23,7 @@ public:
     virtual void setEngineState(State* state);
     virtual State * getLaunchState();
     virtual void setLaunchState(State* state); //maybe necessary
+    vector<Engine*> getEngineVec();
     int getEngineNo();
     void setEngineNo(int no);
     virtual ~Stage();

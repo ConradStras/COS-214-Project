@@ -15,7 +15,7 @@ DragonSpacecraft::~DragonSpacecraft() {
 
 void DragonSpacecraft::handleContent(Contents *content) {
     if(content->getType() == "Cargo") {
-        cout << "Cargo loaded onto DragonSpacecraft.\n";
+        cout << "Cargo loaded onto " <<Dragon::getType()<<".\n";
         Dragon::add(content);
     }
     else {

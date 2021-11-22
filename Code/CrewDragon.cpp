@@ -16,9 +16,9 @@ CrewDragon::~CrewDragon() {
 
 void CrewDragon::handleContent(Contents *content) {
     if(content->getType() == "Humans") {
-        cout << "Humans boarded CrewDragon.\n";
+        cout << "Humans boarded "<<Dragon::getType()<<".\n";
     } else if(content->getType() == "Cargo") {
-        cout << "Cargo loaded onto CrewDragon.\n";
+        cout << "Cargo loaded onto "<<Dragon::getType()<<".\n";
     }
     Dragon::add(content);
 }
