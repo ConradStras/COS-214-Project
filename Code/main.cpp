@@ -88,13 +88,19 @@ int main(){
         if (i % 2 == 0) arrHumansAndCargo[i] = new Humans();
         else arrHumansAndCargo[i] = new Cargo();
     }
-    Dragon * dragons[6];
+
+//    Dragon * dragons[6];
+    int num2=6;
+    Dragon** dragons = new Dragon*[num2];
+
     for (int i = 0; i < 6; ++i) {
         if(i % 2 == 0) {
-            dragons[i] = new DragonSpacecraft("Space Dragon " + to_string(i));
+            dragons[i] = factories[1]->createDragon("Space Dragon " + to_string(i));
         }
-        else dragons[i] = new CrewDragon("Crew Dragon "  + to_string(i));
+          else
+              dragons[i] = factories[1]->createDragon("Crew Dragon " + to_string(i));
     }
+
     dragons[0]->addDelegator(dragons[1]);
     dragons[2]->addDelegator(dragons[3]);
     dragons[4]->addDelegator(dragons[5]);
