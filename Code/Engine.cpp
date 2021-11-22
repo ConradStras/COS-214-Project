@@ -13,7 +13,3 @@ void Engine::add(Engine* e, int stage){
     }
 }
 
-Engine* Engine::clone() {
-    return new Engine();
-}
-

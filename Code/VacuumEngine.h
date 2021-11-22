@@ -9,7 +9,6 @@
 class VacuumEngine: public Engine{
 public:
     void print();
-    Engine * clone();
 };
 
 

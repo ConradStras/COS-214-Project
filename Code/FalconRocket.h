@@ -21,7 +21,7 @@ class Stage;
 class Memento;
 class Satellite;
 //Originator in Memento DP.
-class FalconRocket: public SpaceXProperty { //Component in Decorator DP
+class FalconRocket: public SpaceXProperty{ //Component in Decorator DP
 public:
     virtual void add(vector<Engine*>, int stage);
     virtual void print();

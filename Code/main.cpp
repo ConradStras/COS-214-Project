@@ -71,6 +71,7 @@ int main(){
     f1->print();
     cout<<endl;
     f2->print();
+    cout<<endl;
 
     f1->getStageStatus();
     f1->launch(0);

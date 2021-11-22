@@ -9,7 +9,6 @@
 class MerlinEngine:public Engine{
 public:
     void print();
-    Engine* clone();
 };
 
 
