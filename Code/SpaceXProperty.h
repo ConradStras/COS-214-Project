@@ -13,11 +13,11 @@
 using namespace std;
 class SpaceXProperty {
     public: 
-        virtual void attach(Observer*){};
-        virtual void detach(Observer*){};
-        virtual void notify(){};
+        virtual void attach(Observer*);
+        virtual void detach(Observer*);
+        virtual void notify();
         virtual SpaceXProperty* clone();
-        virtual ~SpaceXProperty(){};
+        virtual ~SpaceXProperty();
 };
 
 

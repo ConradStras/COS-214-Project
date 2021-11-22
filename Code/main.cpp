@@ -67,7 +67,6 @@ int main(){
         satellites[i] = s1->clone();
         f1->addSatellite(satellites[i]);
     }
-
     f1->print();
     cout<<endl;
     f2->print();
