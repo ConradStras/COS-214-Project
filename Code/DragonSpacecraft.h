@@ -7,11 +7,13 @@
 #define COS_214_PROJECT_DRAGONSPACECRAFT_H
 #include "Dragon.h"
 
+using namespace std;
+
 class DragonSpacecraft : public Dragon {
     public:
-        DragonSpacecraft();
+        DragonSpacecraft(string type);
         ~DragonSpacecraft();
-        void handleContent(Dragon*);
+        void handleContent(Contents *);
 };
 
 

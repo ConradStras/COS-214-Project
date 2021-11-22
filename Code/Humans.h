@@ -8,12 +8,12 @@
 #include "Contents.h"
 #include <string>
 
+using namespace std;
+
 class Humans : public Contents{
     public:    
         Humans();
         ~Humans();
-    private:
-        string type;
 };
 
 

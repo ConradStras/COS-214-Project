@@ -13,12 +13,3 @@ void Engine::add(Engine* e, int stage){
     }
 }
 
-
-void Engine::remove() {
-
-}
-
-Engine* Engine::clone() {
-    return new Engine();
-}
-

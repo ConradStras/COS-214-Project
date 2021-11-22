@@ -8,7 +8,7 @@
 //Takes the caretaker participant in the memento DP.
 class SimulationStore {
 public:
-    void StoreMemento(Memento* mem, int no);
+    void StoreMemento(Memento* memento, int no);
     Memento * retrieveMemento(int no);
     ~SimulationStore();
 private:

@@ -4,11 +4,6 @@
 
 #include "Satellite.h"
 
-Satellite* Satellite::clone() {
+SpaceXProperty* Satellite::clone() {
     return new Satellite();
 }
-
-void Satellite::remove() {
-
-}
-

@@ -7,7 +7,3 @@
 void VacuumEngine::print() {
     cout<<"VacuumMerlinEngine added."<<endl;
 }
-
-Engine *VacuumEngine::clone() {
-    return new VacuumEngine();
-}

@@ -1,7 +1,7 @@
 all: spacex
 
-spacex: main.o SimulationStore.o State.o Launch.o Engineer.o Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o DroneShip.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o ISS.o LaunchButton.o Memento.o MerlinEngine.o LaunchState.o Observer.o ObserverRepository.o Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o TestButton.cpp VacuumEngine.o
-		g++  main.o SimulationStore.o State.o Launch.o Engineer.o Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o DroneShip.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o ISS.o LaunchButton.o Memento.o MerlinEngine.o LaunchState.o Observer.o ObserverRepository.o Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o TestButton.cpp VacuumEngine.o  -o spacex
+spacex: main.o SimulationStore.o State.o Launch.o Engineer.o Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o DroneShip.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o ISS.o LaunchButton.o Memento.o MerlinEngine.o LaunchState.o Observer.o ObserverRepository.o Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o VacuumEngine.o
+		g++  main.o SimulationStore.o State.o Launch.o Engineer.o Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o DroneShip.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o ISS.o LaunchButton.o Memento.o MerlinEngine.o LaunchState.o Observer.o ObserverRepository.o Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o VacuumEngine.o  -o spacex
 
 main.o: main.cpp
 		g++ -c -g main.cpp
@@ -96,8 +96,6 @@ SpaceXProperty.o: SpaceXProperty.cpp
 Stage.o: Stage.cpp
 		g++ -c -g Stage.cpp
 
-TestButton.o: TestButton.cpp
-		g++ -c -g TestButton.cpp
 
 VacuumEngine.o: VacuumEngine.cpp
 		g++ -c -g VacuumEngine.cpp
@@ -107,6 +105,7 @@ State.o: State.cpp
 
 SimulationStore.o: SimulationStore.cpp
 		g++ -c -g SimulationStore.cpp
+
 clean:
-	rm -rf *.o spacex
+	rm -rf *.o *.icloud spacex
 

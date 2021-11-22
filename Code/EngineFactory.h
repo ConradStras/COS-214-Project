@@ -4,10 +4,13 @@
 
 #ifndef COS_214_PROJECT_ENGINEFACTORY_H
 #define COS_214_PROJECT_ENGINEFACTORY_H
-
-
-class EngineFactory {
-
+#include "SpaceXFactory.h"
+#include "MerlinEngine.h"
+#include "VacuumEngine.h"
+class EngineFactory:public SpaceXFactory{
+public:
+    Engine* createEngine(string e);
+    Dragon* createDragon(string d);
 };
 
 

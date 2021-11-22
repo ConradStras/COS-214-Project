@@ -6,11 +6,11 @@
 #include "Cargo.h"
 #include <iostream>
 
-Cargo::Cargo() {
-    this->type = "Cargo";
-    cout << "CARGO CONSTRUCTOR\n";
-}
+using namespace std;
 
 Cargo::~Cargo() {
     cout << "CARGO DESTRUCTOR\n";
 }
+
+Cargo::Cargo() : Contents("Cargo") {}
+

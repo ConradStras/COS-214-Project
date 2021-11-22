@@ -62,8 +62,12 @@ Memento FalconRocket::createMemento() {
     mem = new Memento(stages[0], stages[1]);
 }
 
-void FalconRocket::addSatellite(Satellite *) {
+void FalconRocket::addSatellite(SpaceXProperty *) {
+    //implemented in Falcon Nine only
+}
 
+string FalconRocket::getName() {
+    return name;
 }
 
 //Observer edit

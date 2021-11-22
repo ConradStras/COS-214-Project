@@ -17,7 +17,7 @@ FalconNine::~FalconNine() {
 }
 
 void FalconNine::print() {
-    cout<<"Falcon 9: "<<endl;
+    cout<<"FALCON 9: "<<getName()<<endl;
     cout<<"Satellite count: "<<noSatellites<<endl;
     FalconRocket::print();
 }
@@ -26,7 +26,8 @@ void FalconNine::add(vector<Engine*> vec, int stage) {
     for(int i =0; i<vec.size(); i++){
         if(stage==1){
             if(stages[0]->getEngineNo()<9){
-                FirstStageEngines.push_back(vec.at(i));
+//                FirstStageEngines.push_back(vec.at(i));
+                stages[0]->addEngine(vec.at(i));
                 stages[0]->increaseEngineCount();
             }
             else
@@ -34,7 +35,7 @@ void FalconNine::add(vector<Engine*> vec, int stage) {
         }
         else if(stage==2){
             if(stages[1]->getEngineNo()<1){
-                SecondStageEngines.push_back(vec.at(i));
+                stages[1]->addEngine(vec.at(i));
                 stages[1]->increaseEngineCount();
             }
             else
@@ -43,9 +44,6 @@ void FalconNine::add(vector<Engine*> vec, int stage) {
     }
 }
 
-void FalconNine::remove() {
-
-}
 
 void FalconNine::getStageStatus() {
     FalconRocket::getStageStatus();
@@ -54,7 +52,7 @@ void FalconNine::launch(int stageNo) {
     FalconRocket::launch(stageNo);
 }
 
-void FalconNine::addSatellite(Satellite *s) {
+void FalconNine::addSatellite(SpaceXProperty *s) {
     if(noSatellites<60){
         satellites.push_back(s);
         noSatellites++;

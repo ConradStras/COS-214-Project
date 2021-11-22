@@ -6,14 +6,18 @@
 #ifndef COS_214_PROJECT_CONTENTS_H
 #define COS_214_PROJECT_CONTENTS_H
 #include "Dragon.h"
+using namespace std;
 
-class Contents : public Dragon {
+class Contents{
     public: 
-        Contents();
+        Contents(const string& type);
         ~Contents();
-        void add(Dragon* dragonContent);
+        void print();
+        void add(Contents* dragonContent);
+        const string &getType() const;
     private:
-        Dragon* content;
+        string type;
+        Contents* content;
 };
 
 

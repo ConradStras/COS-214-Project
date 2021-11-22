@@ -13,13 +13,13 @@ public:
     // State things
     FirstStage(int nineorheavy);
     FirstStage(int nineorheavy, int EngineNo, State* eState, State* lState);
+    FirstStage(int nineorheavy, int EngineNo, State* eState, State* lState, vector<Engine *> engineIn);
+
     void currentStatus();
     void increaseEngineCount();
     void handleChange(FalconRocket*);
-    int getNoH();
     // Stage things, strategy design pattern
     // fire changes the launch state
-    void fire();
     ~FirstStage();
 private:
     int NineOrHeavy; //9 = nine , heavy = 0.
