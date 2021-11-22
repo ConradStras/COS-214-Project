@@ -15,13 +15,13 @@ public:
     ~FalconNine();
     void getStageStatus();
     void add(vector<Engine*>, int stage);
-    void addSatellite(Satellite* s);
+    void addSatellite(SpaceXProperty* s);
     void launch(int stageNo);
     void print();
 
 protected:
     int noSatellites;
-    vector<Satellite*> satellites;
+    vector<SpaceXProperty*> satellites;
 };
 
 #endif //COS_214_PROJECT_FALCONNINE_H

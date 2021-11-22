@@ -33,7 +33,7 @@ public:
     virtual void setName(string name);
     virtual string getName();
     virtual void launch(int stageNo);//command DP, state DP (change method).
-    virtual void addSatellite(Satellite*);
+    virtual void addSatellite(SpaceXProperty*);
     virtual ~FalconRocket();
 protected:
     // a stage is a (stage class) and a state.

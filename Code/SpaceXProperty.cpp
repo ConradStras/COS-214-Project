@@ -3,3 +3,6 @@
 //
 
 #include "SpaceXProperty.h"
+SpaceXProperty* SpaceXProperty::clone() {
+    return new SpaceXProperty();
+}

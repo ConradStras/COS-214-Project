@@ -60,9 +60,9 @@ int main(){
     f2->add(falconHeavyEngines->second,2);
 
     //adding satellites to Falcon 9
-    Satellite* s1 = new Satellite();
+    SpaceXProperty* s1 = new Satellite();
     int numSatellites = 60;
-    Satellite** satellites = new Satellite*[numSatellites];
+    SpaceXProperty** satellites = new SpaceXProperty*[numSatellites];
     for(int i = 0; i<numSatellites; i++){
         satellites[i] = s1->clone();
         f1->addSatellite(satellites[i]);

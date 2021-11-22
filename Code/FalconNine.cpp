@@ -52,7 +52,7 @@ void FalconNine::launch(int stageNo) {
     FalconRocket::launch(stageNo);
 }
 
-void FalconNine::addSatellite(Satellite *s) {
+void FalconNine::addSatellite(SpaceXProperty *s) {
     if(noSatellites<60){
         satellites.push_back(s);
         noSatellites++;
