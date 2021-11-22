@@ -8,6 +8,7 @@
 #include "Dragon.h"
 
 using namespace std;
+
 class CrewDragon : public Dragon {
     public: 
         CrewDragon(string type);
