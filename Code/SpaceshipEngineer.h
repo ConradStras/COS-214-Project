@@ -21,8 +21,7 @@ public:
     virtual ~SpaceshipEngineer();
     virtual void update(const string &message_from_subject);
     void printInfo();
-    void RemoveMeFromTheList();
-    void printInfo();
+    void RemoveFromList();
 
 private:
   string message_from_subject_;

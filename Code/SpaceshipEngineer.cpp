@@ -9,7 +9,7 @@ void SpaceshipEngineer :: update (const string &message_from_subject){
     printInfo();
 }
 
-void SpaceshipEngineer :: RemoveMeFromTheList(){
+void SpaceshipEngineer :: RemoveFromList(){
     subject_.detach(this);
     cout << "Spaceship engineer \"" << number_ << "\" removed from the list.\n";
 }
