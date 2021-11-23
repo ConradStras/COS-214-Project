@@ -31,7 +31,7 @@ public:
     virtual void print();
     virtual void getStageStatus();
     virtual Memento * createMemento();//I made three mementos, so that we have three simulations.
-    virtual void reinstateMemento();
+    virtual void reinstateMemento(Memento* memIn);
     virtual void setStageState(Stage*, int stageno);
     virtual Stage * getStage(int stageNo);
     virtual void launch(int stageNo);//command DP, state DP (change method).
@@ -56,7 +56,6 @@ protected:
     string name;
     // therefore the rocket takes the context role of the state DP
 private:
-    Memento * mem;
     //adding these to facilitate easy workings for state changes.
     //int noEngines;
     //int noSatellites;

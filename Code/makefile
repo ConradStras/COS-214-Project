@@ -1,7 +1,7 @@
 all: spacex
 
-spacex: main.o SimulationStore.o State.o Launch.o Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o ISS.o Memento.o MerlinEngine.o LaunchState.o Observer.o  Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o VacuumEngine.o
-		g++  main.o SimulationStore.o State.o Launch.o  Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o ISS.o Memento.o MerlinEngine.o LaunchState.o Observer.o  Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o VacuumEngine.o  -o spacex
+spacex: main.o SimulationStore.o State.o Launch.o Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o Memento.o MerlinEngine.o LaunchState.o Observer.o  Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o VacuumEngine.o
+		g++  main.o SimulationStore.o State.o Launch.o  Button.o Cargo.o Command.o Contents.o CrewDragon.o Dragon.o DragonFactory.o DragonSpacecraft.o Engine.o EngineFactory.o FalconHeavy.o FalconNine.o FalconRocket.o FirstStage.o Humans.o  Memento.o MerlinEngine.o LaunchState.o Observer.o  Satellite.o SecondStage.o SpaceXFactory.o SpaceXProperty.o Stage.o VacuumEngine.o  -o spacex
 
 main.o: main.cpp
 		g++ -c -g main.cpp
@@ -30,7 +30,6 @@ DragonFactory.o: DragonFactory.cpp
 DragonSpacecraft.o: DragonSpacecraft.cpp
 		g++ -c -g DragonSpacecraft.cpp
 
-
 Engine.o: Engine.cpp
 		g++ -c -g Engine.cpp
 
@@ -51,10 +50,6 @@ FirstStage.o: FirstStage.cpp
 
 Humans.o: Humans.cpp
 		g++ -c -g Humans.cpp
-
-ISS.o: ISS.cpp
-		g++ -c -g ISS.cpp
-
 
 Launch.o: Launch.cpp
 		g++ -c -g Launch.cpp
@@ -85,7 +80,6 @@ SpaceXProperty.o: SpaceXProperty.cpp
 
 Stage.o: Stage.cpp
 		g++ -c -g Stage.cpp
-
 
 VacuumEngine.o: VacuumEngine.cpp
 		g++ -c -g VacuumEngine.cpp

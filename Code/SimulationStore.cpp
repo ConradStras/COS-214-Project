@@ -12,6 +12,4 @@ Memento *SimulationStore::retrieveMemento(int no) {
     return mem[no];
 }
 
-SimulationStore::~SimulationStore() {
-
-}
+SimulationStore::~SimulationStore() {}

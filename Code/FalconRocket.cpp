@@ -48,15 +48,14 @@ void FalconRocket::setName(string name) {
     this->name = name;
 }
 
-void FalconRocket::reinstateMemento() {
-    stages[0] = mem->stages[0];
-    stages[1] = mem->stages[1];
+void FalconRocket::reinstateMemento(Memento * memIn) {
+    stages[0] = memIn->stages[0];
+    stages[1] = memIn->stages[1];
 }
 
 
 Memento  * FalconRocket::createMemento() {
-    mem = new Memento(stages[0], stages[1]);
-    return mem;
+    return  new Memento(stages[0], stages[1]);
 }
 
 void FalconRocket::addSatellite(SpaceXProperty *) {
