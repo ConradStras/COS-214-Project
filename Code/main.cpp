@@ -19,6 +19,8 @@
 #include "DragonFactory.h"
 #include "SimulationStore.h"
 #include "Memento.h"
+#include "DroneShipEngineer.h"
+#include "SpaceshipEngineer.h"
 using namespace std;
 void TestDragons(){
     SpaceXFactory* factory;
@@ -46,7 +48,6 @@ void TestDragons(){
         dragons[i]->print();
     }
 }
-
 void TestFalcons(){
     FalconRocket* f1 = new FalconNine("Brooklyn Nine Nine");
     FalconRocket* f2 = new FalconHeavy("We will steal the moon.");
@@ -57,7 +58,7 @@ void TestFalcons(){
     Engine* falconNineEngines = new Engine();
     Engine* falconHeavyEngines = new Engine();
     Engine* vacuumEngine = new VacuumEngine();
-    Engine* vacuumEngineHeavy = new VacuumEngine;
+    Engine* vacuumEngineHeavy = new VacuumEngine();
     SpaceXFactory* factory;
     factory = new EngineFactory();
     int num0 = 10;
@@ -78,7 +79,6 @@ void TestFalcons(){
     falconHeavyEngines->add(vacuumEngineHeavy,2);
     f2->add(falconHeavyEngines->first,1);
     f2->add(falconHeavyEngines->second,2);
-
     //adding satellites to Falcon 9
     SpaceXProperty* s1 = new Satellite();
     int numSatellites = 60;
@@ -100,7 +100,6 @@ void TestFalcons(){
     Button* button= new Button(command);
     button->pressFireUpNine();
 }
-
 void TestMemento(){
     SimulationStore temp;
     FalconRocket * falcons[2];
@@ -143,16 +142,42 @@ void TestMemento(){
     }
 
 }
-
-void TestObserver(){
-    FalconRocket * falcon;
-    falcon = new FalconHeavy("As Heavy as I am Humble");
-}
+///The code below  was not included due to errors in the observer pattern.
+//void TestObserver(){
+//    ///Creating the appropriate Falcon.
+//    FalconRocket * falcon;
+//    falcon = new FalconHeavy("As Heavy as I am Humble");
+//    Engine* falconHeavyEngines = new Engine();
+//    Engine* vacuumEngineHeavy = new VacuumEngine();
+//    int num1 = 27;
+//    Engine** merlinEnginesHeavy = new Engine*[num1];
+//    SpaceXFactory* factory, * factory2;
+//    factory = new EngineFactory();
+//    for(int i = 0; i<num1; i++){
+//        merlinEnginesHeavy[i] = factory->createEngine("merlin");
+//        falconHeavyEngines->add(merlinEnginesHeavy[i],1);
+//    }
+//    falconHeavyEngines->add(vacuumEngineHeavy,2);
+//    falcon->add(falconHeavyEngines->first,1);
+//    falcon->add(falconHeavyEngines->second,2);
+//    ///End of appropriate Falcon creation.
+//    ///Creating the appropriate Dragon
+//    factory2 = new DragonFactory();
+//    Dragon * Smaug;
+//    Smaug = factory2->createDragon("Crew Dragon: SMAUG THE EMPLOYER");
+//    ///End of creating the appropriate Dragon
+//    Observer * engineers[20];
+//    for (int i = 0; i < 10; ++i) {
+//        engineers[i] = new DroneShipEngineer(*falcon);
+//    }
+//    for (int i = 10; i < 20; ++i) {
+//        //engineers[i] = new SpaceshipEngineer(Smaug);
+//    }
+//}
 ///The Main.
 int main(){
-    //TestFalcons();
-    //TestDragons();
-    TestMemento();//hello.
-    //TestObserver();
+    TestFalcons();
+    TestDragons();
+    TestMemento();
     return 0;
 }
