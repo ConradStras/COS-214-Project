@@ -43,10 +43,6 @@ Stage * FalconRocket::getStage(int stageNo) {
     return stages[stageNo];
 }
 
-FalconRocket::~FalconRocket() {
-//this needs to be implemented for Engine and stage deletion, might be tricky.
-
-}
 
 void FalconRocket::setName(string name) {
     this->name = name;
@@ -58,8 +54,9 @@ void FalconRocket::reinstateMemento() {
 }
 
 
-Memento FalconRocket::createMemento() {
+Memento  * FalconRocket::createMemento() {
     mem = new Memento(stages[0], stages[1]);
+    return mem;
 }
 
 void FalconRocket::addSatellite(SpaceXProperty *) {
@@ -97,18 +94,15 @@ void FalconRocket :: notify(){
     list<Observer *>::iterator iterator = list_observer.begin();
     numberOfObservers();
     while (iterator != list_observer.end()) {
-      (*iterator)->update(message);
-      ++iterator;
+        (*iterator)->update(message);
+        ++iterator;
+    }
 }
 
 
+FalconRocket::~FalconRocket() {
 
-
-
-
-
-
-
+}
 
 
 

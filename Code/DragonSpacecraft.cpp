@@ -46,10 +46,11 @@ void DragonSpacecraft :: createMessage(string message = "Empty") {
     notify();
   }
 
-void DragonSpacecraft :: notify(){
+void DragonSpacecraft :: notify() {
     list<Observer *>::iterator iterator = list_observer.begin();
     numberOfObservers();
     while (iterator != list_observer.end()) {
-      (*iterator)->update(message);
-      ++iterator;
+        (*iterator)->update(message);
+        ++iterator;
+    }
 }

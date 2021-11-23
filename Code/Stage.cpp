@@ -37,7 +37,9 @@ void Stage::setEngineState(State *state) {
     this->engineState = state;
 }
 
-Stage::~Stage() {}
+Stage::~Stage() {
+
+}
 
 
 int Stage::getNoH() const {

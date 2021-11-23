@@ -14,7 +14,6 @@ public:
     FirstStage(int nineorheavy);
     FirstStage(int nineorheavy, int EngineNo, State* eState, State* lState);
     FirstStage(int nineorheavy, int EngineNo, State* eState, State* lState, vector<Engine *> engineIn);
-
     void currentStatus();
     void increaseEngineCount();
     void handleChange(FalconRocket*);

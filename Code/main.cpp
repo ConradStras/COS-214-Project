@@ -71,7 +71,6 @@ int main(){
     cout<<endl;
     f2->print();
     cout<<endl;
-
     f1->getStageStatus();
     f1->launch(0);
     f1->getStageStatus();
@@ -88,11 +87,9 @@ int main(){
         if (i % 2 == 0) arrHumansAndCargo[i] = new Humans();
         else arrHumansAndCargo[i] = new Cargo();
     }
-
 //    Dragon * dragons[6];
     int num2=6;
     Dragon** dragons = new Dragon*[num2];
-
     for (int i = 0; i < 6; ++i) {
         if(i % 2 == 0) {
             dragons[i] = factories[1]->createDragon("Space Dragon " + to_string(i));

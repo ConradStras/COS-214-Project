@@ -30,7 +30,7 @@ public:
     virtual void add(vector<Engine*>, int stage);
     virtual void print();
     virtual void getStageStatus();
-    virtual Memento createMemento();//I made three mementos, so that we have three simulations.
+    virtual Memento * createMemento();//I made three mementos, so that we have three simulations.
     virtual void reinstateMemento();
     virtual void setStageState(Stage*, int stageno);
     virtual Stage * getStage(int stageNo);

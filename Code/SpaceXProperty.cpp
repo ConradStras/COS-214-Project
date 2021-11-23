@@ -3,8 +3,14 @@
 //
 
 #include "SpaceXProperty.h"
-
-
-SpaceXProperty::~SpaceXProperty() {
-
+SpaceXProperty* SpaceXProperty::clone() {
+    return new SpaceXProperty();
 }
+
+SpaceXProperty::~SpaceXProperty() {}
+
+void SpaceXProperty::attach(Observer *) {}
+
+void SpaceXProperty::detach(Observer *) {}
+
+void SpaceXProperty::notify() {}

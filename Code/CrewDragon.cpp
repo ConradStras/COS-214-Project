@@ -6,9 +6,7 @@
 #include "CrewDragon.h"
 #include <iostream>
 #include "Contents.h"
-CrewDragon::CrewDragon(string type)  : Dragon(type){
-    cout << "CREWDRAGON CONSTRUCTOR\n";
-}
+CrewDragon::CrewDragon(string type)  : Dragon(type){}
 
 CrewDragon::~CrewDragon() {
     cout << "CREWDRAGON DESTRUCTOR\n";
@@ -43,10 +41,11 @@ void CrewDragon :: createMessage(string message = "Empty") {
     notify();
   }
 
-void CrewDragon :: notify(){
+void CrewDragon :: notify() {
     list<Observer *>::iterator iterator = list_observer.begin();
     numberOfObservers();
     while (iterator != list_observer.end()) {
-      (*iterator)->update(message);
-      ++iterator;
+        (*iterator)->update(message);
+        ++iterator;
+    }
 }

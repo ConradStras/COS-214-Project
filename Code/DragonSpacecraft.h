@@ -12,7 +12,7 @@
 
 using namespace std;
 
-class DragonSpacecraft : public Dragon, public SpaceXProperty{
+class DragonSpacecraft : public Dragon{
     public:
         DragonSpacecraft(string type);
         ~DragonSpacecraft();

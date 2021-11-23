@@ -4,8 +4,10 @@
 
 #ifndef COS_214_PROJECT_OBSERVER_H
 #define COS_214_PROJECT_OBSERVER_H
+#include <string>
+#include <iostream>
 
-
+using namespace std;
 class Observer {
 public:
   virtual ~Observer(){};
