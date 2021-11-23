@@ -72,9 +72,9 @@ string FalconRocket::getName() {
 
 //Observer edit
 
-FalconRocket:: ~FalconRocket(){
-    cout<<"Deleting FalconRocket"<<endl;
-}
+// FalconRocket:: ~FalconRocket(){
+//     cout<<"Deleting FalconRocket"<<endl;
+// }
 
 void FalconRocket :: attach(Observer *observer){
     list_observer.push_back(observer);
